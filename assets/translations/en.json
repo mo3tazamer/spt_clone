@@ -1,0 +1,16 @@
+{
+
+  "logIn" : "log In",
+  "phoneNumber": "phone Number",
+  "enterPhoneNumber": "enter Phone Number",
+  "resendCode" : "resend Code",
+  "identify" : "identify",
+  "signIn" : "sign In",
+  "firstName" : "first Name",
+  "lastName" : "last Name",
+  "enterName" : "enter Name",
+  "welcome" : "welcome",
+  "otpMsg" : "otpMsg"
+
+
+}
