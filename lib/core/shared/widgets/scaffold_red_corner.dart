@@ -12,19 +12,16 @@ class ScaffoldRedCorner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: appBar,
       body: Stack(
         alignment: Alignment.topRight,
         children: [
-          Positioned(
-              child: AppSvgImage(
-                color: Colors.red,
-              height: 200.h,
-              width: 200.w,
-
+          AppSvgImage(
+            color: Colors.red,
+            height: 200.h,
+            width: 200.w,
             image: ImagesAssets.redCorner,
-          )),
+          ),
           body,
         ],
       ),
