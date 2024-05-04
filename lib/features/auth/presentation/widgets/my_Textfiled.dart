@@ -1,11 +1,13 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:spt_clone/auth/presentation/widgets/svg_image.dart';
+
 import 'package:spt_clone/core/utils/app_assets.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
+import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
 
-import '../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_colors.dart';
+
 
 class PhoneFormFiled extends StatelessWidget {
   const PhoneFormFiled(

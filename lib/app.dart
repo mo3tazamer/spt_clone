@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spt_clone/auth/presentation/screens/login_Screen.dart';
+
 import 'package:spt_clone/core/utils/app_constants.dart';
+
+import 'features/auth/presentation/screens/login_Screen.dart';
 
 class SptClone extends StatelessWidget {
   const SptClone({super.key});

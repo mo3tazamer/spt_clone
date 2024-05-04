@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:spt_clone/auth/presentation/widgets/svg_image.dart';
 
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_textstyles.dart';
-import '../../../core/utils/sizes.dart';
+import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_textstyles.dart';
+import '../../../../core/utils/sizes.dart';
+
+
+
 
 
 class AppMainButton extends StatelessWidget {

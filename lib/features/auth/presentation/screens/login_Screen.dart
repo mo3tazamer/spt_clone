@@ -8,8 +8,9 @@ import 'package:spt_clone/core/utils/app_strings.dart';
 import 'package:spt_clone/core/utils/app_textstyles.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
 
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_formatters.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_formatters.dart';
 import '../widgets/my_Textfiled.dart';
 import '../widgets/my_button.dart';
 
