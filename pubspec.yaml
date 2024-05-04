@@ -31,8 +31,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+  flutter_screenutil: ^5.9.0
   easy_localization: ^3.0.6
   dio: ^5.4.3+1
+  country_code_picker: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -64,6 +66,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/translations/
+    - assets/images/
+    - assets/icons/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -80,9 +84,9 @@ flutter:
   fonts:
      - family: Janna
        fonts:
-         - asset: fonts/Janna-LT-Bold.ttf
+         - asset: assets/fonts/Janna-Bold.ttf
            weight: 700
-         - asset: fonts/Janna-LT-Regular.ttf
+         - asset: assets/fonts/Janna-LT-Regular.ttf
            weight: 400
 
 

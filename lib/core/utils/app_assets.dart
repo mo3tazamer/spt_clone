@@ -1,10 +1,14 @@
 const String _iconsPath = 'assets/icons';
-const String _imagesPath = 'assets/images/';
+const String _imagesPath = 'assets/images';
 
 
+class ImagesAssets{
+  ImagesAssets._();
+  static const String logo = '$_imagesPath/logo.png' ;
+
+}
 class IconAssets{
-  static const String splashIcon = '$_iconsPath/splash_icon.svg' ;
-
-
+  IconAssets._();
+  static const String call = '$_iconsPath/call_icon.svg' ;
 
 }

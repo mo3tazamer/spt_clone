@@ -1,5 +1,5 @@
-final class Sizes {
-  Sizes._();
+final class AppSizes {
+  AppSizes._();
   static const zero = 0.0;
   static const s1 = 1.0;
   static const s2 = 2.0;
@@ -13,6 +13,7 @@ final class Sizes {
   static const s12 = 12.0;
   static const s13 = 13.0;
   static const s14 = 14.0;
+  static const s15 = 15.0;
   static const s16 = 16.0;
   static const s18 = 18.0;
   static const s20 = 20.0;

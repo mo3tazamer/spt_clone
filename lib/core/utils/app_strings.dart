@@ -1,6 +1,7 @@
 import '../../translations/locale_keys.g.dart';
 
 class AppStrings {
+  AppStrings._();
   static const String appName = "SPT Clone";
   static const String logIn = LocaleKeys.logIn;
   static const String welcome = LocaleKeys.welcome;

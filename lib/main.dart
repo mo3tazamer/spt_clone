@@ -15,6 +15,8 @@ void main() {
         Locale(AppConstants.arCode)
       ],
       path: AppConstants.localizationPath,
+      startLocale:const Locale(AppConstants.arCode) ,
+      useOnlyLangCode: false,
       saveLocale: true,
       fallbackLocale: const Locale(AppConstants.enCode),
       assetLoader: const CodegenLoader(),
