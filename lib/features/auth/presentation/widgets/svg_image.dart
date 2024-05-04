@@ -23,7 +23,7 @@ class AppSvgImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      IconAssets.call,
+      image,
       colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
       fit: fit!,
       height: height,
