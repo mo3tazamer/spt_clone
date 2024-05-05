@@ -2,6 +2,8 @@
   "logIn" : "تسجيل الدخول",
   "phoneNumber": "رقم الجوال",
   "enterPhoneNumber": "أدخل رقم الجوال",
+  "identifyCode": "رمز التحقق",
+  "PleaseEnterTheVerificationCodeSentToYourMobilePhone": "فضلا ادخل رمز التحقق المرسل إلى جوالك",
   "resendCode" : "اعادة الارسال",
   "identify" : "تحقق",
   "signIn" : "تسجيل جديد",

@@ -18,6 +18,8 @@ class CodegenLoader extends AssetLoader{
   "logIn": "تسجيل الدخول",
   "phoneNumber": "رقم الجوال",
   "enterPhoneNumber": "أدخل رقم الجوال",
+  "identifyCode": "رمز التحقق",
+  "PleaseEnterTheVerificationCodeSentToYourMobilePhone": "فضلا ادخل رمز التحقق المرسل إلى جوالك",
   "resendCode": "اعادة الارسال",
   "identify": "تحقق",
   "signIn": "تسجيل جديد",
@@ -31,6 +33,8 @@ static const Map<String,dynamic> en = {
   "logIn": "log In",
   "phoneNumber": "phone Number",
   "enterPhoneNumber": "enter Phone Number",
+  "identifyCode": "identify Code",
+  "PleaseEnterTheVerificationCodeSentToYourMobilePhone": "Please Enter The Verification Code Sent To Your Mobile Phone",
   "resendCode": "resend Code",
   "identify": "identify",
   "signIn": "sign In",
@@ -38,7 +42,7 @@ static const Map<String,dynamic> en = {
   "lastName": "last Name",
   "enterName": "enter Name",
   "welcome": "welcome",
-  "otpMsg": "otpMsg"
+  "otpMsg": "if you do not receive the code, you can resend the code within 20 seconds."
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

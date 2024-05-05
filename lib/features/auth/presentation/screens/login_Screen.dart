@@ -8,7 +8,6 @@ import 'package:spt_clone/core/utils/app_strings.dart';
 import 'package:spt_clone/core/utils/app_textstyles.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
 
-
 import '../../../../core/shared/widgets/scaffold_red_corner.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_formatters.dart';
@@ -31,7 +30,7 @@ class _LogInScreenState extends State<LogInScreen> {
         appBar: null,
         body: SingleChildScrollView(
           child: Padding(
-            padding:  const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             child: Form(
               key: _formKey,
               child: Column(

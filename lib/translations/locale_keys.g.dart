@@ -4,6 +4,8 @@ abstract class  LocaleKeys {
   static const logIn = 'logIn';
   static const phoneNumber = 'phoneNumber';
   static const enterPhoneNumber = 'enterPhoneNumber';
+  static const identifyCode = 'identifyCode';
+  static const pleaseEnterTheVerificationCodeSentToYourMobilePhone = 'PleaseEnterTheVerificationCodeSentToYourMobilePhone';
   static const resendCode = 'resendCode';
   static const identify = 'identify';
   static const signIn = 'signIn';

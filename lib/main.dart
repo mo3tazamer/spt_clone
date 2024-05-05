@@ -17,8 +17,8 @@ void main() {
       path: AppConstants.localizationPath,
       startLocale:const Locale(AppConstants.arCode) ,
       useOnlyLangCode: false,
-      saveLocale: true,
-      fallbackLocale: const Locale(AppConstants.enCode),
+      saveLocale: false,
+      fallbackLocale: const Locale(AppConstants.arCode),
       assetLoader: const CodegenLoader(),
       child: const SptClone()));
 }

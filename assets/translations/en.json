@@ -3,6 +3,8 @@
   "logIn" : "log In",
   "phoneNumber": "phone Number",
   "enterPhoneNumber": "enter Phone Number",
+  "identifyCode": "identify Code",
+  "PleaseEnterTheVerificationCodeSentToYourMobilePhone": "Please Enter The Verification Code Sent To Your Mobile Phone",
   "resendCode" : "resend Code",
   "identify" : "identify",
   "signIn" : "sign In",
@@ -10,7 +12,7 @@
   "lastName" : "last Name",
   "enterName" : "enter Name",
   "welcome" : "welcome",
-  "otpMsg" : "otpMsg"
+  "otpMsg" : "if you do not receive the code, you can resend the code within 20 seconds."
 
 
 }
