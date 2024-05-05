@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:spt_clone/core/utils/app_constants.dart';
-import 'package:spt_clone/features/auth/presentation/screens/otp_screen.dart';
+
 
 import 'features/auth/presentation/screens/sign_up_screen.dart';
 
