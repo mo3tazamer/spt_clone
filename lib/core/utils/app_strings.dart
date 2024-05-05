@@ -12,6 +12,7 @@ class AppStrings {
 
   static const String enterPhoneNumber = LocaleKeys.enterPhoneNumber;
   static const String otpMsg = LocaleKeys.otpMsg;
+  static const String registerNow = LocaleKeys.registerNow;
   static const String resendCode = LocaleKeys.resendCode;
   static const String identify = LocaleKeys.identify;
   static const String signIn = LocaleKeys.signIn;

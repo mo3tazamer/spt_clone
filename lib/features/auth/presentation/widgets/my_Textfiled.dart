@@ -43,12 +43,14 @@ class PhoneFormFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+
       inputFormatters: inputFormatters,
       obscureText: obscureText!,
       keyboardType: keyboardType,
       validator: validator,
       controller: controller,
       decoration: InputDecoration(
+        isDense: true,
         filled: true,
         fillColor: fillColor,
         focusColor: focusColor,
