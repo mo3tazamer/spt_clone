@@ -4,12 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spt_clone/features/auth/data/data_sources/web_sevices.dart';
-import 'package:spt_clone/features/auth/data/repositories/authrepository.dart';
-import 'package:spt_clone/features/auth/domain/repositories/auth_repository.dart';
-import 'package:spt_clone/features/auth/domain/use_cases/register_usecase.dart';
-import 'package:spt_clone/features/auth/domain/use_cases/send_otp.dart';
-import 'package:spt_clone/features/auth/domain/use_cases/verify_otp.dart';
+
 
 import '../../features/auth/injector.dart';
 import '../api/api_consumer.dart';
