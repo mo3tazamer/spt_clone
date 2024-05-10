@@ -1,8 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:spt_clone/config/theme/theme.dart';
 
-import 'package:spt_clone/core/utils/app_constants.dart';
+
 
 
 import 'features/auth/presentation/screens/sign_up_screen.dart';
@@ -24,12 +25,7 @@ class SptClone extends StatelessWidget {
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
-
-          theme: ThemeData(
-            fontFamily: AppConstants.fontFamilyAr,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
-          ),
+          theme: AppTheme.themeData,
           home: const SignUpScreen(),
         );
       }
