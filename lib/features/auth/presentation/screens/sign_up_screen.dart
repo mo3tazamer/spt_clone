@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/core/shared/widgets/scaffold_red_corner.dart';
@@ -9,12 +9,12 @@ import 'package:spt_clone/core/utils/app_strings.dart';
 import 'package:spt_clone/core/utils/app_textstyles.dart';
 import 'package:spt_clone/features/auth/presentation/widgets/my_button.dart';
 
-import '../../../../core/git_it/git_it.dart';
+
 import '../../../../core/shared/widgets/app_text_field.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/sizes.dart';
-import '../../domain/use_cases/send_otp.dart';
+
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
