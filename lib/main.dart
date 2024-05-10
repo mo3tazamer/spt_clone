@@ -11,7 +11,7 @@ import 'core/utils/app_constants.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   EasyLocalization.ensureInitialized();
-  await setup();
+  await appInjector();
 
   // var send = await SendOtpUseCase(authRepository: sL()).call(recipient: '966522222223');
   //
