@@ -18,8 +18,8 @@ class AppInterceptors extends Interceptor {
             null
         ? '${AppConstants.bearer} ${localStorageConsumer.getData(key: AppConstants.token)}'
         : null;
-    options.connectTimeout = const Duration(seconds: 5);
-    options.receiveTimeout = const Duration(seconds: 5);
+    options.connectTimeout = const Duration(seconds: 10);
+    options.receiveTimeout = const Duration(seconds: 10);
 
     handler.next(options);
     if (kDebugMode) {
