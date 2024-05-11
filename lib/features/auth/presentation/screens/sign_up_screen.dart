@@ -68,7 +68,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 ],
                 validator: (value) {
-                  return null;
+                   return null;
+
+
                 },
                 hintStyle: AppTextStyles.style14gray,
                 hintText: AppStrings.enterName.tr(),

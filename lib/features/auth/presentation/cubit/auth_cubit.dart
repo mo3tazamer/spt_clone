@@ -57,5 +57,6 @@ class AuthCubit extends Cubit<AuthState> {
     var result = await getCityListUseCase.call(param: param);
     result.when((success) => emit(GetCityListSuccess(cityEntity: success)),
         (error) => emit(GetCityListError(error: error)));
+
   }
 }
