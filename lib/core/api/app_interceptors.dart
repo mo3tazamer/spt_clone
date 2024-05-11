@@ -1,40 +1,33 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:spt_clone/core/utils/app_constants.dart';
+import 'package:spt_clone/core/git_it/git_it.dart';
 
 import '../local_storage/local_storage_consumer.dart';
+import '../utils/app_constants.dart';
 
 class AppInterceptors extends Interceptor {
-  LocalStorageConsumer localStorageConsumer;
   AppInterceptors({required this.localStorageConsumer});
+
+  final LocalStorageConsumer localStorageConsumer;
+
+  // String? getCurrentLang() {
+  //   return sL<SharedPreferences>().getString(AppConstants.acceptLanguage);
+  // }
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    options.headers[AppConstants.contentLanguage] = AppConstants.arCode;
-    options.headers[AppConstants.xRequestedWith] = AppConstants.xRequestedWith;
-    options.headers[AppConstants.contentType] = AppConstants.contentType;
-    options.headers[AppConstants.authorization] = localStorageConsumer.getData(
-                key: AppConstants.token) !=
-            null
-        ? '${AppConstants.bearer} ${localStorageConsumer.getData(key: AppConstants.token)}'
-        : null;
-    options.connectTimeout = const Duration(seconds: 10);
-    options.receiveTimeout = const Duration(seconds: 10);
-
-    handler.next(options);
-    if (kDebugMode) {
-      print('REQUEST[${options.method}] => PATH: ${options.path}');
-    }
+    options
+      ..headers[AppConstants.authorization] = localStorageConsumer.getData(
+                  key: AppConstants.token) !=
+              null
+          ? '${AppConstants.bearer} ${localStorageConsumer.getData(key: AppConstants.token)}'
+          : null
+      ..headers[AppConstants.contentLanguage] = AppConstants.arCode
+      ..headers[AppConstants.xRequestedWith] = AppConstants.xMLHttpRequest
+      ..connectTimeout = const Duration(seconds: 10)
+      ..receiveTimeout = const Duration(seconds: 10);
     super.onRequest(options, handler);
-  }
-
-  @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) {
-    if (kDebugMode) {
-      print(
-          'RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
-    }
-    super.onResponse(response, handler);
   }
 
   @override

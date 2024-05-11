@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
+import 'package:spt_clone/features/auth/domain/use_cases/get_city_list.dart';
 
 import 'package:spt_clone/translations/codegen_loader.g.dart';
 
@@ -13,10 +15,10 @@ void main() async {
   EasyLocalization.ensureInitialized();
   await appInjector();
 
-  // var send = await SendOtpUseCase(authRepository: sL()).call(recipient: '966522222223');
+  // var send = await GetCityListUseCase(authRepository: sL()).call(param: '50');
   //
   // if (kDebugMode) {
-  //  (send.when((l) => print('ready ${l.toString()}'), (r) => print(r.message)));
+  //  (send.when((l) => ('ready ${l.toString()}'), (r) => (r.message)));
   //
   // }
 

@@ -11,7 +11,11 @@ class AppConstants{
   static const bearer ='Bearer ';
 
   static const token ='token';
-  static const xRequestedWith ='XMLHttpRequest';
+
+  static const xRequestedWith ='X-Requested-With';
+  static const xMLHttpRequest ='XMLHttpRequest';
+
+
 
 
 

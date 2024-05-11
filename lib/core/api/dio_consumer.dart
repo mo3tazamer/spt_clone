@@ -5,13 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:spt_clone/core/api/endpoints.dart';
 
-
-
-
 import 'package:spt_clone/core/api/status_code.dart';
-
-
-
 
 import '../error/exceptions.dart';
 import '../git_it/git_it.dart';
@@ -51,7 +45,9 @@ class DioConsumer implements ApiConsumer {
 
   @override
   Future get(
-      {required String path, Map<String, dynamic>? queryParameters, Map<String, dynamic>? body}) async {
+      {required String path,
+      Map<String, dynamic>? queryParameters,
+      Map<String, dynamic>? body}) async {
     try {
       final response = await client.get(path, queryParameters: queryParameters);
       return response.data;
@@ -71,7 +67,6 @@ class DioConsumer implements ApiConsumer {
       return response.data;
     } on DioException catch (error) {
       return _handleDioError(error);
-
     }
   }
 

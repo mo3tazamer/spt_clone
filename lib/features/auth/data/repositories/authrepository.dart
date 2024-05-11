@@ -1,6 +1,7 @@
 import 'package:multiple_result/multiple_result.dart';
 import 'package:spt_clone/core/error/exceptions.dart';
 import 'package:spt_clone/features/auth/data/data_sources/web_sevices.dart';
+import 'package:spt_clone/features/auth/domain/entities/city.dart';
 import 'package:spt_clone/features/auth/domain/entities/user.dart';
 
 import '../../../../core/error/failures.dart';
@@ -48,7 +49,7 @@ class AuthRepositoryImp implements AuthRepository {
 
   @override
   Future<Result<User?, Failure>> verifyOtp(
-      {required int recipient, required int code}) async {
+      {required String recipient, required String code}) async {
     if (await networkInfo.isConnected) {
       try {
         return Result.success(
@@ -59,6 +60,21 @@ class AuthRepositoryImp implements AuthRepository {
     } else {
       return const Result.error(
           NetworkFailure(message: AppStrings.noInternetConnection));
+    }
+  }
+
+  @override
+  Future<Result<List<CityEntity>, Failure>> getCityList({required String param}) async {
+    if (await networkInfo.isConnected) {
+      try {
+        return Result.success(await webServices.getCityList(param: param));
+      } on ServerException catch (e) {
+        return Result.error(ServerFailure(message: e.message!));
+      }
+    } else {
+      return const Result.error(
+          NetworkFailure(message: AppStrings.noInternetConnection));
+
     }
   }
 }

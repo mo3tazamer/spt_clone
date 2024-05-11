@@ -4,13 +4,15 @@ import '../../../../core/api/api_consumer.dart';
 import '../../../../core/api/endpoints.dart';
 
 import '../../../../core/local_storage/local_storage_consumer.dart';
+import '../../domain/entities/city.dart';
 import '../../domain/entities/user.dart';
 
 abstract class WebServices {
   Future<void> register(
       {required String name, required String phone, required String cityId});
   Future<dynamic> sendOtp({required String recipient});
-  Future<User?> verifyOtp({required int recipient, required int code});
+  Future<User?> verifyOtp({required String recipient, required String code});
+  Future<List<CityEntity>> getCityList({required String param});
 }
 
 class WebServicesImp implements WebServices {
@@ -38,7 +40,8 @@ class WebServicesImp implements WebServices {
   }
 
   @override
-  Future<User?> verifyOtp({required int recipient, required int code}) async {
+  Future<User?> verifyOtp(
+      {required String recipient, required String code}) async {
     final response = await apiConsumer.post(
         path: ApiEndPoints.verifyOtp,
         queryParameters: {'recipient': recipient, 'city_id': code});
@@ -46,5 +49,17 @@ class WebServicesImp implements WebServices {
     await localStorageConsumer.saveData(
         key: AppConstants.token, value: response.data.token);
     return User.fromJson(response['data']);
+  }
+
+  @override
+  Future<List<CityEntity>> getCityList({required String param}) async {
+    final response = await apiConsumer.get(
+      path: ApiEndPoints.getCityList,
+      queryParameters: {'paginate': param},
+    );
+
+    return (response['data']['data'] as List)
+        .map((e) => CityEntity.fromJson(e))
+        .toList();
   }
 }
