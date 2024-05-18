@@ -19,15 +19,15 @@ class AppStrings {
   static const String firstName = LocaleKeys.firstName;
   static const String lastName = LocaleKeys.lastName;
   static const String enterName = LocaleKeys.enterName;
-  static const String somethingWentWrong = 'some thing Went Wrong';
-  static const String noInternetConnection = 'no Internet Connection';
-  static const String connectionTimeoutError = 'connection Timeout Error';
-  static const String internalServerErrorException = 'internalServerErrorException';
-  static const String loading = 'loading';
-  static const String someThingWentWrong = 'something went wrong!';
-  static const String success = 'success.';
-  static const String required = 'required';
-
-
-
+  static const String somethingWentWrong = LocaleKeys.somethingWentWrong;
+  static const String noInternetConnection = LocaleKeys.noInternetConnection;
+  static const String connectionTimeoutError =
+      LocaleKeys.connectionTimeoutError;
+  static const String internalServerErrorException =
+      LocaleKeys.internalServerErrorException;
+  static const String loading = LocaleKeys.loading;
+  static const String someThingWentWrong = LocaleKeys.someThingWentWrong;
+  static const String success = LocaleKeys.success;
+  static const String required = LocaleKeys.required;
+  static const String city = LocaleKeys.city;
 }

@@ -13,7 +13,16 @@
   "lastName" : "last Name",
   "enterName" : "enter Name",
   "welcome" : "welcome",
-  "otpMsg" : "if you do not receive the code, you can resend the code within 20 seconds."
+  "otpMsg" : "if you do not receive the code, you can resend the code within 20 seconds.",
+  "somethingWentWrong" : "some thing Went Wrong",
+  "noInternetConnection" : "no Internet Connection",
+  "connectionTimeoutError" : "connection Time out Error",
+  "internalServerErrorException" : "internal Server Error Exception",
+  "loading" : "loading",
+  "someThingWentWrong" : "some Thing Went Wrong",
+  "required" : "required",
+  "success" : "success",
+  "city" : "city"
 
 
 }

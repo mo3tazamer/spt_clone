@@ -28,7 +28,16 @@ class CodegenLoader extends AssetLoader{
   "lastName": "الاسم الثاني",
   "enterName": "أدخل الاسم",
   "welcome": "مرحبًا ، مرحبًا بعودتك!",
-  "otpMsg": "إذا لم تستلم الرمز ، يمكنك إعادة إرسال الرمز خلال 20 ثانية."
+  "otpMsg": "إذا لم تستلم الرمز ، يمكنك إعادة إرسال الرمز خلال 20 ثانية.",
+  "somethingWentWrong": "حدث خطا",
+  "noInternetConnection": "لا يوجد اتصال بالانترنت",
+  "connectionTimeoutError": "خطأ مهلة الاتصال",
+  "internalServerErrorException": "خطأ في الخادم الداخلي",
+  "loading": "جار التحميل",
+  "someThingWentWrong": "هناك خطأ ما",
+  "required": "مطلوب",
+  "success": "نجاح",
+  "city": "المدينة"
 };
 static const Map<String,dynamic> en = {
   "logIn": "log In",
@@ -44,7 +53,16 @@ static const Map<String,dynamic> en = {
   "lastName": "last Name",
   "enterName": "enter Name",
   "welcome": "welcome",
-  "otpMsg": "if you do not receive the code, you can resend the code within 20 seconds."
+  "otpMsg": "if you do not receive the code, you can resend the code within 20 seconds.",
+  "somethingWentWrong": "some thing Went Wrong",
+  "noInternetConnection": "no Internet Connection",
+  "connectionTimeoutError": "connection Time out Error",
+  "internalServerErrorException": "internal Server Error Exception",
+  "loading": "loading",
+  "someThingWentWrong": "some Thing Went Wrong",
+  "required": "required",
+  "success": "success",
+  "city": "city"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

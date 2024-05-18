@@ -121,8 +121,9 @@ class _LogInScreenState extends State<LogInScreen> {
                         appLoading(loadingType: LoadingType.dismiss);
 
                         AppNavigator.navigateNamedTo(
-                            context, AppRoutes.otpScreen,
-                            arguments: phoneController.text);
+                          context,
+                          AppRoutes.otpScreen,
+                        );
                       }
                       if (state is SendOtpError) {
                         appLoading(loadingType: LoadingType.dismiss);

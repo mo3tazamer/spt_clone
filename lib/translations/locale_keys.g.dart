@@ -15,5 +15,14 @@ abstract class  LocaleKeys {
   static const enterName = 'enterName';
   static const welcome = 'welcome';
   static const otpMsg = 'otpMsg';
+  static const somethingWentWrong = 'somethingWentWrong';
+  static const noInternetConnection = 'noInternetConnection';
+  static const connectionTimeoutError = 'connectionTimeoutError';
+  static const internalServerErrorException = 'internalServerErrorException';
+  static const loading = 'loading';
+  static const someThingWentWrong = 'someThingWentWrong';
+  static const required = 'required';
+  static const success = 'success';
+  static const city = 'city';
 
 }

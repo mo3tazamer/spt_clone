@@ -13,7 +13,18 @@
   "enterName" : "أدخل الاسم",
   "welcome" : "مرحبًا ، مرحبًا بعودتك!",
   "otpMsg" :
-  "إذا لم تستلم الرمز ، يمكنك إعادة إرسال الرمز خلال 20 ثانية."
+  "إذا لم تستلم الرمز ، يمكنك إعادة إرسال الرمز خلال 20 ثانية.",
+  "somethingWentWrong" : "حدث خطا",
+  "noInternetConnection" : "لا يوجد اتصال بالانترنت",
+  "connectionTimeoutError" : "خطأ مهلة الاتصال",
+  "internalServerErrorException" : "خطأ في الخادم الداخلي",
+  "loading" : "جار التحميل",
+  "someThingWentWrong" : "هناك خطأ ما",
+  "required" : "مطلوب",
+  "success" : "نجاح",
+  "city" : "المدينة"
+
+
 
 
 

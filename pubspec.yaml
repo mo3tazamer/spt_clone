@@ -47,6 +47,8 @@ dependencies:
   flutter_easyloading:
   fluttertoast: ^8.2.5
   intl: ^0.18.1
+  gap: ^3.0.1
+  flutter_keyboard_visibility: ^6.0.0
 
 
 

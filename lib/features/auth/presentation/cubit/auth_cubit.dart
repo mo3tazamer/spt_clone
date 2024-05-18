@@ -22,16 +22,24 @@ class AuthCubit extends Cubit<AuthState> {
   VerifyOtpUseCase verifyOtpUseCase;
   SendOtpUseCase sendOtpUseCase;
   GetCityListUseCase getCityListUseCase;
-  late var phone;
+  var phone = '';
 
+  List<CityEntity> cities = [];
+
+  late CityEntity _selectedCity;
+  CityEntity get selectedCity => _selectedCity;
+  void onChangedCity(CityEntity? cityEntity) {
+    emit(SelectCityStartState());
+    _selectedCity = cityEntity!;
+    emit(SelectCityFinishedState());
+  }
 
   static AuthCubit get(context) => BlocProvider.of<AuthCubit>(context);
 
   Future<void> sendOtp({required String recipient}) async {
     emit(SendOtpLoading());
-    phone= recipient;
+    phone = recipient;
     var result = await sendOtpUseCase(recipient: recipient);
-
 
     result.when((success) => emit(SendOtpSuccess()),
         (error) => emit(SendOtpError(error: error)));
@@ -59,8 +67,9 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> getCityList({required String param}) async {
     emit(GetCityListLoading());
     var result = await getCityListUseCase(param: param);
-    result.when((success) => emit(GetCityListSuccess(cityEntity: success)),
-        (error) => emit(GetCityListError(error: error)));
-
+    result.when((success) {
+      cities = success;
+      emit(GetCityListSuccess(cityEntity: success));
+    }, (error) => emit(GetCityListError(error: error)));
   }
 }
