@@ -23,4 +23,11 @@ class AppStrings {
   static const String noInternetConnection = 'no Internet Connection';
   static const String connectionTimeoutError = 'connection Timeout Error';
   static const String internalServerErrorException = 'internalServerErrorException';
+  static const String loading = 'loading';
+  static const String someThingWentWrong = 'something went wrong!';
+  static const String success = 'success.';
+  static const String required = 'required';
+
+
+
 }

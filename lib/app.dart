@@ -1,10 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/config/theme/theme.dart';
 import 'package:spt_clone/core/git_it/git_it.dart';
 import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:spt_clone/test.dart';
 
 import 'config/routes/app_generator.dart';
 import 'features/auth/presentation/screens/sign_up_screen.dart';
@@ -28,7 +30,8 @@ class SptClone extends StatelessWidget {
               supportedLocales: context.supportedLocales,
               locale: context.locale,
               theme: AppTheme.themeData,
-              home: const SignUpScreen(),
+              builder: EasyLoading.init(),
+              home: const Test(),
             );
           }),
     );

@@ -44,6 +44,9 @@ dependencies:
   flutter_bloc: ^8.1.2
   multiple_result: ^5.1.0
   dropdown_search: ^5.0.6
+  flutter_easyloading:
+  fluttertoast: ^8.2.5
+  intl: ^0.18.1
 
 
 

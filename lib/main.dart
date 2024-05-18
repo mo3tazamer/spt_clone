@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:spt_clone/features/auth/domain/use_cases/get_city_list.dart';
 
 import 'package:spt_clone/translations/codegen_loader.g.dart';
@@ -13,6 +14,7 @@ import 'core/utils/app_constants.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   EasyLocalization.ensureInitialized();
+  EasyLoading.init();
   await appInjector();
 
   // var send = await GetCityListUseCase(authRepository: sL()).call(param: '50');
