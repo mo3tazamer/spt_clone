@@ -22,7 +22,7 @@ class AuthCubit extends Cubit<AuthState> {
   VerifyOtpUseCase verifyOtpUseCase;
   SendOtpUseCase sendOtpUseCase;
   GetCityListUseCase getCityListUseCase;
-  var phone = '';
+  var userPhone = '';
 
   List<CityEntity> cities = [];
 
@@ -38,7 +38,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<void> sendOtp({required String recipient}) async {
     emit(SendOtpLoading());
-    phone = recipient;
+    userPhone = recipient;
     var result = await sendOtpUseCase(recipient: recipient);
 
     result.when((success) => emit(SendOtpSuccess()),

@@ -128,7 +128,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
                             authCubit.verifyOtpUseCase(
-                                recipient: authCubit.phone,
+                                recipient: authCubit.userPhone,
                                 code: pinController.text);
                           }
                         },

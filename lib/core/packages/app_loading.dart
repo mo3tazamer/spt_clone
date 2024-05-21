@@ -3,7 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import '../utils/app_strings.dart';
 
-Future<void> appLoading({
+Future<void> appLoading ({
   required LoadingType loadingType,
   String? loadingText,
   EasyLoadingMaskType? maskType = EasyLoadingMaskType.black,
@@ -14,6 +14,7 @@ Future<void> appLoading({
   switch (loadingType) {
     case LoadingType.loading:
       await EasyLoading.show(
+
         status: loadingText ?? AppStrings.loading,
         maskType: maskType,
         dismissOnTap: dismissOnTap,
@@ -26,6 +27,7 @@ Future<void> appLoading({
         maskType: maskType,
         dismissOnTap: dismissOnTap,
         duration: duration,
+
       );
       break;
     case LoadingType.success:
@@ -38,7 +40,7 @@ Future<void> appLoading({
       break;
     case LoadingType.dismiss:
       await EasyLoading.dismiss(
-        animation: true,
+
       );
       break;
   }

@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 
 import 'package:flutter/material.dart';
@@ -32,14 +31,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   late AuthCubit authCubit;
 
   TextEditingController nameController = TextEditingController();
+  final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
   @override
   void initState() {
-    ShowMessageToast.setMessage(message: 'new user', type:ToastType.success);
+    ShowMessageToast.setMessage(message: 'new user', type: ToastType.success);
     authCubit = AuthCubit.get(context);
-
-
-
 
     super.initState();
   }
@@ -53,121 +50,132 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return ScaffoldRedCorner(
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(AppSizes.s20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: AppSizes.s90.h,
-              ),
-              Center(child: Image.asset(ImagesAssets.logo, fit: BoxFit.cover)),
-              SizedBox(
-                height: AppSizes.s48.h,
-              ),
-              Text(
-                AppStrings.signIn.tr(),
-                style: AppTextStyles.style24,
-              ),
-              SizedBox(
-                height: AppSizes.s10.h,
-              ),
-              Text(
-                AppStrings.registerNow.tr(),
-                style: AppTextStyles.style14.grey,
-              ),
-              SizedBox(
-                height: AppSizes.s10.h,
-              ),
-              Text(
-                AppStrings.firstName.tr(),
-                style: AppTextStyles.style14.bold,
-              ),
-              SizedBox(
-                height: AppSizes.s5.h,
-              ),
-              AppTextField(
-                controller: nameController,
-                inputFormatters: [
-                  AppInputFormatters.denySpace,
-                  AppInputFormatters.lengthLimitingTextInputFormatter(5),
-                  AppInputFormatters.nonArabicAndEnglishNumbersFilter,
-                ],
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return AppStrings.required.tr();
-                  }
-                  return null;
-                },
-                hintStyle: AppTextStyles.style14gray,
-                hintText: AppStrings.enterName.tr(),
-              ),
-              SizedBox(
-                height: AppSizes.s5.h,
-              ),
-              Text(
-                AppStrings.city.tr(),
-                style: AppTextStyles.style14.bold,
-              ),
-              SizedBox(
-                height: AppSizes.s5.h,
-              ),
-              AppDropDownSearch<CityEntity>(
-                labelText: 'select The City',
-                hintText:'select The City',
-                itemAsString: (city) => city.name!,
-                showSearchBox: true,
-                searchTitle: 'searchDots',
-                asyncItems: (_) async {
-                  if (authCubit.cities.isEmpty) {
-
-                    await authCubit.getCityList(param: '50');
-                  }
-                  return authCubit.cities;
-                },
-                selectedItem: authCubit.selectedCity,
-                onChanged: authCubit.onChangedCity,
-                validator: (brand) {
-                  if (brand == null) {
-                    return 'selectTheCity';
-                  }
-                  return null;
-                },
-                autoValidateMode: AutovalidateMode.onUserInteraction,
-              ),
-              SizedBox(
-                height: AppSizes.s15.h,
-              ),
-              BlocConsumer<AuthCubit, AuthState>(
-                listener: (context, state) {
-                  if (state is RegisterLoading) {
-                    appLoading(loadingType: LoadingType.loading);
-                  } else if (state is RegisterError) {
-                    appLoading(loadingType: LoadingType.error);
-                    ShowMessageToast.setMessage(
-                        message: '${state.error}', type: ToastType.error);
-                  } else if (state is RegisterSuccess) {
-                    /// navigate to home Screen
-                  }
-                },
-                builder: (context, state) {
-                  return AppMainButton(
-                    text: AppStrings.logIn.tr(),
-                    onPressed: () {
-                      authCubit.register(
-                        name: nameController.text,
-                        phone: authCubit.phone,
-                        cityId: '${authCubit.selectedCity!.id}',
+          child: Form(
+            key: _key,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: AppSizes.s90.h,
+                ),
+                Center(
+                    child: Image.asset(ImagesAssets.logo, fit: BoxFit.cover)),
+                SizedBox(
+                  height: AppSizes.s48.h,
+                ),
+                Text(
+                  AppStrings.signIn.tr(),
+                  style: AppTextStyles.style24,
+                ),
+                SizedBox(
+                  height: AppSizes.s10.h,
+                ),
+                Text(
+                  AppStrings.registerNow.tr(),
+                  style: AppTextStyles.style14.grey,
+                ),
+                SizedBox(
+                  height: AppSizes.s10.h,
+                ),
+                Text(
+                  AppStrings.firstName.tr(),
+                  style: AppTextStyles.style14.bold,
+                ),
+                SizedBox(
+                  height: AppSizes.s5.h,
+                ),
+                AppTextField(
+                  controller: nameController,
+                  inputFormatters: [
+                    AppInputFormatters.denySpace,
+                    AppInputFormatters.lengthLimitingTextInputFormatter(5),
+                    AppInputFormatters.nonArabicAndEnglishNumbersFilter,
+                  ],
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return AppStrings.required.tr();
+                    }
+                    return null;
+                  },
+                  hintStyle: AppTextStyles.style14gray,
+                  hintText: AppStrings.enterName.tr(),
+                ),
+                SizedBox(
+                  height: AppSizes.s5.h,
+                ),
+                Text(
+                  AppStrings.city.tr(),
+                  style: AppTextStyles.style14.bold,
+                ),
+                SizedBox(
+                  height: AppSizes.s5.h,
+                ),
+                AppDropDownSearch<CityEntity>(
+                  labelText: 'select The City',
+                  hintText: 'select The City',
+                  itemAsString: (city) => city.name!,
+                  showSearchBox: true,
+                  searchTitle: 'searchDots',
+                  asyncItems: (_) async {
+                    if (authCubit.cities.isEmpty) {
+                      await authCubit.getCityList(param: '50');
+                    }
+                    return authCubit.cities;
+                  },
+                  selectedItem: authCubit.selectedCity,
+                  onChanged: authCubit.onChangedCity,
+                  validator: (brand) {
+                    if (brand == null) {
+                      return 'selectTheCity';
+                    }
+                    return null;
+                  },
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
+                ),
+                SizedBox(
+                  height: AppSizes.s15.h,
+                ),
+                BlocConsumer<AuthCubit, AuthState>(
+                  listener: (context, state) {
+                    if (state is RegisterLoading) {
+                      appLoading(
+                        loadingType: LoadingType.loading,
                       );
-                    },
-                    fillColor: AppColors.redColor,
-                  );
-                },
-              )
-            ],
+                    }
+                    if (state is RegisterError) {
+                      appLoading(loadingType: LoadingType.dismiss);
+                      ShowMessageToast.setMessage(
+                          message: '${state.error}', type: ToastType.error);
+                    }
+                    if (state is RegisterSuccess) {
+                      appLoading(loadingType: LoadingType.dismiss);
+                      /// navigate to home Screen
+                    }
+                  },
+                  builder: (context, state) {
+                    return AppMainButton(
+                      text: AppStrings.logIn.tr(),
+                      onPressed: () {
+                        if (_key.currentState!.validate()) {
+                          authCubit.register(
+                            name: nameController.text,
+                            phone: authCubit.userPhone,
+                            cityId: '${authCubit.selectedCity?.id}',
+                          );
+
+                        }
+
+                      },
+                      fillColor: AppColors.redColor,
+                    );
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
