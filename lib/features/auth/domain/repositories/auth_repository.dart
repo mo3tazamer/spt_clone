@@ -1,6 +1,6 @@
 import 'package:multiple_result/multiple_result.dart';
 import 'package:spt_clone/core/error/failures.dart';
-import 'package:spt_clone/features/auth/domain/use_cases/get_city_list.dart';
+
 
 import '../entities/city.dart';
 import '../entities/user.dart';

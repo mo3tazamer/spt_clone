@@ -61,5 +61,6 @@ class WebServicesImp implements WebServices {
     return (response['data']['data'] as List)
         .map((e) => CityEntity.fromJson(e))
         .toList();
+
   }
 }

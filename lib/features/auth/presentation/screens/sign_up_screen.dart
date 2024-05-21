@@ -1,4 +1,4 @@
-import 'package:dropdown_search/dropdown_search.dart';
+
 import 'package:easy_localization/easy_localization.dart';
 
 import 'package:flutter/material.dart';
@@ -15,6 +15,7 @@ import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:spt_clone/features/auth/presentation/widgets/my_button.dart';
 
 import '../../../../core/packages/app_loading.dart';
+import '../../../../core/shared/widgets/app_drop_down_search/app_drop_down_search.dart';
 import '../../../../core/shared/widgets/app_text_field.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -29,13 +30,16 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   late AuthCubit authCubit;
-  List<CityEntity> cities = [];
+
   TextEditingController nameController = TextEditingController();
 
   @override
   void initState() {
+    ShowMessageToast.setMessage(message: 'new user', type:ToastType.success);
     authCubit = AuthCubit.get(context);
-    cities = authCubit.getCityListUseCase(param: '500') as List<CityEntity>;
+
+
+
 
     super.initState();
   }
@@ -43,11 +47,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   void dispose() {
     nameController.dispose();
+
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+
     return ScaffoldRedCorner(
       body: SingleChildScrollView(
         child: Padding(
@@ -109,29 +115,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: AppSizes.s5.h,
               ),
-              DropdownSearch<CityEntity>(
-                validator:  (value) {
-                  if (value == null) {
-                    return AppStrings.required.tr();
+              AppDropDownSearch<CityEntity>(
+                labelText: 'select The City',
+                hintText:'select The City',
+                itemAsString: (city) => city.name!,
+                showSearchBox: true,
+                searchTitle: 'searchDots',
+                asyncItems: (_) async {
+                  if (authCubit.cities.isEmpty) {
+
+                    await authCubit.getCityList(param: '50');
+                  }
+                  return authCubit.cities;
+                },
+                selectedItem: authCubit.selectedCity,
+                onChanged: authCubit.onChangedCity,
+                validator: (brand) {
+                  if (brand == null) {
+                    return 'selectTheCity';
                   }
                   return null;
                 },
                 autoValidateMode: AutovalidateMode.onUserInteraction,
-                popupProps: const PopupProps.bottomSheet(
-                  showSearchBox: true,
-                  showSelectedItems: true,
-                  fit: FlexFit.loose,
-                ),
-                selectedItem: authCubit.selectedCity,
-                onChanged: (city) {
-                  authCubit.onChangedCity(city);
-                },
-                asyncItems: (_) async {
-                  if (authCubit.cities.isEmpty) {
-                    await authCubit.getCityListUseCase(param: '50');
-                  }
-                  return authCubit.cities;
-                },
               ),
               SizedBox(
                 height: AppSizes.s15.h,
@@ -155,7 +160,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       authCubit.register(
                         name: nameController.text,
                         phone: authCubit.phone,
-                        cityId: authCubit.selectedCity.id!,
+                        cityId: '${authCubit.selectedCity!.id}',
                       );
                     },
                     fillColor: AppColors.redColor,
