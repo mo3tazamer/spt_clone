@@ -18,8 +18,8 @@ class ScaffoldRedCorner extends StatelessWidget {
         children: [
           AppSvgImage(
             color: Colors.red,
-            height: 200.h,
-            width: 200.w,
+            height: 240.h,
+            width: 240.w,
             image: ImagesAssets.redCorner,
           ),
           body,

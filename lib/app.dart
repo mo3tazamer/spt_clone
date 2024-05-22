@@ -10,6 +10,7 @@ import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 
 import 'config/routes/app_generator.dart';
 import 'features/auth/presentation/screens/sign_up_screen.dart';
+import 'features/splash/presentation/screens/splash_screen.dart';
 
 class SptClone extends StatelessWidget {
   const SptClone({super.key});
@@ -31,7 +32,7 @@ class SptClone extends StatelessWidget {
               locale: context.locale,
               theme: AppTheme.themeData,
               builder: EasyLoading.init(),
-              home: const SignUpScreen(),
+              home: const SplashScreen(),
             );
           }),
     );
