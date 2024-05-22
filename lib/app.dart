@@ -9,7 +9,7 @@ import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 
 
 import 'config/routes/app_generator.dart';
-import 'features/auth/presentation/screens/sign_up_screen.dart';
+
 import 'features/splash/presentation/screens/splash_screen.dart';
 
 class SptClone extends StatelessWidget {

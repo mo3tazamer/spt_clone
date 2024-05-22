@@ -9,7 +9,7 @@ import 'package:spt_clone/features/auth/presentation/screens/login_Screen.dart';
 import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
 import '../../../../core/utils/app_constants.dart';
-import '../../../auth/presentation/widgets/svg_image.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
