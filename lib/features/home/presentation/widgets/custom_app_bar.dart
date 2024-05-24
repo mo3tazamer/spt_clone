@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       toolbarHeight: AppSizes.s90.h,
       flexibleSpace: Container(
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(25.0.dm),
             ),
@@ -42,7 +42,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         statusBarColor: Colors.transparent,
       ),
       centerTitle: true,
-      title: Image.asset(ImagesAssets.appBarLogo, fit: BoxFit.scaleDown, scale:   .7.dm,),
+      title: Image.asset(
+        ImagesAssets.appBarLogo,
+        fit: BoxFit.scaleDown,
+        scale: .7.dm,
+      ),
       actions: [
         Padding(
           padding: const EdgeInsets.only(left: AppSizes.s18),
