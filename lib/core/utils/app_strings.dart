@@ -31,4 +31,5 @@ class AppStrings {
   static const String required = LocaleKeys.required;
   static const String city = LocaleKeys.city;
   static const String closePageToTryAgain = 'close Pag eToTry Again';
+  static const String search = 'Search';
 }

@@ -17,7 +17,10 @@ class AppTextField extends StatelessWidget {
       this.labelText,
       this.hintStyle,
       this.labelStyle,
-      this.obscureText});
+      this.obscureText = false,
+      this.onTap,
+      this.prefixIcon,
+      this.suffixIcon});
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
   final TextEditingController? controller;
@@ -29,15 +32,23 @@ class AppTextField extends StatelessWidget {
   final TextStyle? hintStyle;
   final TextStyle? labelStyle;
   final bool? obscureText;
+  final Function()? onTap;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText!,
+      onTap: onTap,
       validator: validator,
       inputFormatters: inputFormatters,
       keyboardType: TextInputType.name,
       controller: controller,
       decoration: InputDecoration(
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderSize!),
           borderSide: BorderSide(color: borderColor!),
@@ -54,7 +65,6 @@ class AppTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderSize!),
           borderSide: const BorderSide(color: AppColors.redColor),
         ),
-
         hintText: hintText,
         hintStyle: hintStyle,
         fillColor: fillColor,
