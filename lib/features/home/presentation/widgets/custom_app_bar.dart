@@ -15,11 +15,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      flexibleSpace:
-          Image.asset(ImagesAssets.appBarBackground, fit: BoxFit.fitHeight),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(bottom: Radius.circular(20.0.sw)),
+      toolbarHeight: 96.h,
+      flexibleSpace: Container(
+        decoration:  BoxDecoration(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(25.0.dm),
+            ),
+            image: const DecorationImage(
+                image: AssetImage(ImagesAssets.appBarBackground),
+                fit: BoxFit.fitHeight)),
       ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.vertical(bottom: Radius.circular(20.0.sw)),
+      // ),
       backgroundColor: Colors.transparent,
       automaticallyImplyLeading: false,
       leading: AppSvgImage(
@@ -57,5 +65,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize =>  Size(double.infinity, AppSizes.s80.h);
+  Size get preferredSize => Size(double.infinity, AppSizes.s90.h);
 }
