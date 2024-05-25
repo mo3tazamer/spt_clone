@@ -3,6 +3,7 @@ final class AppSizes {
   static const zero = 0.0;
   static const s1 = 1.0;
   static const s2 = 2.0;
+  static const s3 = 3.0;
   static const s4 = 4.0;
   static const s5 = 5.0;
   static const s6 = 6.0;
@@ -19,6 +20,7 @@ final class AppSizes {
   static const s20 = 20.0;
   static const s22 = 22.0;
   static const s24 = 24.0;
+  static const s25 = 25.0;
   static const s26 = 26.0;
   static const s28 = 28.0;
   static const s30 = 30.0;
@@ -38,6 +40,7 @@ final class AppSizes {
   static const s84 = 84.0;
   static const s90 = 90.0;
   static const s96 = 96.0;
+  static const s100 = 100.0;
   static const s104 = 104.0;
   static const s108 = 108.0;
   static const s112 = 112.0;
@@ -53,6 +56,8 @@ final class AppSizes {
   static const s208 = 208.0;
   static const s212 = 212.0;
   static const s224 = 224.0;
+  static const s250 = 250.0;
+  static const s267 = 267.0;
   static const infinity = double.infinity;
 }
 

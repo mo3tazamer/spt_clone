@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/app_textstyles.dart';
 
-
-
 class DropDownTitleTile extends StatelessWidget {
   const DropDownTitleTile({
     super.key,
@@ -13,7 +11,7 @@ class DropDownTitleTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.only(
         left: 12.0,
         top: 12.0,
@@ -22,12 +20,10 @@ class DropDownTitleTile extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-
           Text(
             labelText,
             style: AppTextStyles.style15,
           ),
-
         ],
       ),
     );

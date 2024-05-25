@@ -1,11 +1,8 @@
-
-
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-
 
 import '../../../utils/sizes.dart';
 import 'drop_down_appearance.dart';
@@ -84,8 +81,7 @@ class AppDropDownSearch<T> extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-
-             const Gap(AppSizes.s10),
+            const Gap(AppSizes.s10),
             DropdownSearch<T>(
               enabled: enabled,
               onChanged: onChanged,
@@ -151,11 +147,11 @@ class AppDropDownSearch<T> extends StatelessWidget {
   Widget _emptyBuilder(context, searchEntry) {
     return const Center(
       child: SingleChildScrollView(
-        // child: EmptyWidget(
-        //   icon: '',
-        //   title: 'noItemsMatch',
-        // ),
-      ),
+          // child: EmptyWidget(
+          //   icon: '',
+          //   title: 'noItemsMatch',
+          // ),
+          ),
     );
   }
 

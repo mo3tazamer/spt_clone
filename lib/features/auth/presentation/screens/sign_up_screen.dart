@@ -153,6 +153,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     }
                     if (state is RegisterSuccess) {
                       appLoading(loadingType: LoadingType.dismiss);
+
                       /// navigate to home Screen
                     }
                   },
@@ -166,9 +167,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             phone: authCubit.userPhone,
                             cityId: '${authCubit.selectedCity?.id}',
                           );
-
                         }
-
                       },
                       fillColor: AppColors.redColor,
                     );

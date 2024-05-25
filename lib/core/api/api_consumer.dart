@@ -3,7 +3,6 @@ abstract class ApiConsumer {
     required String path,
     Map<String, dynamic>? body,
     Map<String, dynamic>? queryParameters,
-
   });
 
   Future<dynamic> post(

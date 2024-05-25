@@ -131,8 +131,6 @@ dynamic _handleDioError(DioException error) {
       break;
     case DioExceptionType.unknown:
       throw const NoInternetException(AppStrings.noInternetConnection);
-    case DioExceptionType.badCertificate:
-      throw const NoInternetException(AppStrings.noInternetConnection);
     case DioExceptionType.connectionError:
       throw const NoInternetException(AppStrings.noInternetConnection);
   }

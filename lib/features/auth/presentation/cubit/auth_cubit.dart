@@ -26,7 +26,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   List<CityEntity> cities = [];
 
-   CityEntity? _selectedCity ;
+  CityEntity? _selectedCity;
   CityEntity? get selectedCity => _selectedCity;
   void onChangedCity(CityEntity? cityEntity) {
     emit(SelectCityStartState());
@@ -68,7 +68,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(GetCityListLoading());
     var result = await getCityListUseCase(param: param);
     result.when((success) {
-      cities = success ;
+      cities = success;
 
       emit(GetCityListSuccess(cityEntity: success));
     }, (error) => emit(GetCityListError(error: error)));

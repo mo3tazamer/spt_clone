@@ -7,10 +7,9 @@ class AppTheme {
   static ThemeData themeData = ThemeData(
     fontFamily: AppConstants.fontFamilyAr,
     scaffoldBackgroundColor: AppColors.whitePrimaryColor,
-    primaryColor: AppColors.primary,
+    primaryColor: AppColors.redColor,
     appBarTheme: const AppBarTheme(
       systemOverlayStyle: SystemUiOverlayStyle(
-
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
         statusBarBrightness: Brightness.light,

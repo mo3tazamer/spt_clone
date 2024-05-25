@@ -30,6 +30,20 @@ class AppStrings {
   static const String success = LocaleKeys.success;
   static const String required = LocaleKeys.required;
   static const String city = LocaleKeys.city;
-  static const String closePageToTryAgain = 'close Pag eToTry Again';
-  static const String search = 'Search';
+
+  static const String closePageToTryAgain = LocaleKeys.closePageToTryAgain;
+  static const String search = LocaleKeys.search;
+  static const String monthlyPackage = LocaleKeys.monthlyPackage;
+  static const String oneMonthSubscriptionOneMonthFree = LocaleKeys.oneMonthSubscriptionOneMonthFree;
+  static const String riyals150 = LocaleKeys.riyals150;
+  static const String subscriptionPackages = LocaleKeys.subscriptionPackages;
+  static const String viewAll = LocaleKeys.viewAll;
+  static const String requestSpareParts = LocaleKeys.requestSpareParts;
+  static const String requestTow = LocaleKeys.requestTow;
+  static const String sellingCarForRepairs = LocaleKeys.sellingCarForRepairs;
+  static const String sptHelp = LocaleKeys.sptHelp;
+  static const String howOrderInSpt = LocaleKeys.howOrderInSpt;
+  static const String whatCustomersSaidAboutUs = LocaleKeys.whatCustomersSaidAboutUs;
+  static const String howWeGuarantee = LocaleKeys.howWeGuarantee;
+  static const String yourRights = LocaleKeys.yourRights;
 }

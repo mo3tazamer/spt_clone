@@ -7,9 +7,8 @@ class GetCityListUseCase {
   AuthRepository authRepository;
   GetCityListUseCase({required this.authRepository});
 
-  Future<Result<List<CityEntity>, Failure>> call({required String param}) async {
-
-    return  authRepository.getCityList(param: param);
-
+  Future<Result<List<CityEntity>, Failure>> call(
+      {required String param}) async {
+    return authRepository.getCityList(param: param);
   }
 }

@@ -1,9 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-
 
 import 'package:spt_clone/translations/codegen_loader.g.dart';
 
@@ -16,8 +14,6 @@ void main() async {
   EasyLocalization.ensureInitialized();
   EasyLoading.init();
   await appInjector();
-
-
 
   runApp(EasyLocalization(
       supportedLocales: const [

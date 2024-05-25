@@ -10,7 +10,6 @@ import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
 import '../../../../core/utils/app_constants.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -27,8 +26,6 @@ class _SplashScreenState extends State<SplashScreen> {
           duration: 5,
           splashIconSize: 200.h,
           centered: true,
-
-
           splashTransition: SplashTransition.sizeTransition,
           backgroundColor: Colors.white,
           nextScreen: _nextScreen()),

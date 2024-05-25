@@ -5,7 +5,6 @@ import 'package:spt_clone/core/utils/app_extensions.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_textstyles.dart';
 
-
 final class CustomDropDownDecoratorProps extends DropDownDecoratorProps {
   final String? leadingText;
   final String? hintText;

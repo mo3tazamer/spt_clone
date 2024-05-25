@@ -37,7 +37,22 @@ class CodegenLoader extends AssetLoader{
   "someThingWentWrong": "هناك خطأ ما",
   "required": "مطلوب",
   "success": "نجاح",
-  "city": "المدينة"
+  "city": "المدينة",
+  "closePageToTryAgain": "اغلق الصفحة ثم اعد المحاولة",
+  "search": "البحث",
+  "monthlyPackage": "الباقات الشهرية",
+  "oneMonthSubscriptionOneMonthFree": "اشترك شهر + شهر مجانا",
+  "riyals150": "150 ريال",
+  "subscriptionPackages": "باقات الاشتراك",
+  "viewAll": "المزيد",
+  "requestSpareParts": "طلب قطع غيار",
+  "requestTow": "طلب سطحة",
+  "sellingCarForRepairs": "بيع سيارة للتشاليح",
+  "sptHelp": "كيف يسياعدك spt",
+  "howOrderInSpt": "كيف تطلب فى spt",
+  "whatCustomersSaidAboutUs": "ماذا قال عملاؤنا عنا",
+  "howWeGuarantee": "كيف نضمن",
+  "yourRights": "حقوقك"
 };
 static const Map<String,dynamic> en = {
   "logIn": "log In",
@@ -62,7 +77,22 @@ static const Map<String,dynamic> en = {
   "someThingWentWrong": "some Thing Went Wrong",
   "required": "required",
   "success": "success",
-  "city": "city"
+  "city": "city",
+  "closePageToTryAgain": "close Page ToTry Again",
+  "search": "search",
+  "monthlyPackage": "monthly Package",
+  "oneMonthSubscriptionOneMonthFree": "One month subscription + one month free",
+  "riyals150": "SAR 150",
+  "subscriptionPackages": "subscription Packages",
+  "viewAll": "view All",
+  "requestSpareParts": "request Spare Parts",
+  "requestTow": "request Tow",
+  "sellingCarForRepairs": "selling Car For Repairs",
+  "sptHelp": "How spt helps you",
+  "howOrderInSpt": "how Order In Spt",
+  "whatCustomersSaidAboutUs": "what Customers Said About Us",
+  "howWeGuarantee": "how We Guarantee",
+  "yourRights": "your Rights"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

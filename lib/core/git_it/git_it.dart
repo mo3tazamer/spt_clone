@@ -5,7 +5,6 @@ import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 import '../../features/auth/injector.dart';
 import '../../features/auth/presentation/cubit/auth_cubit.dart';
 import '../api/api_consumer.dart';
@@ -27,11 +26,7 @@ Future<void> appInjector() async {
         verifyOtpUseCase: sL(),
         registerUseCase: sL(),
         getCityListUseCase: sL(),
-
-
       ));
-
-
 
   //sharedpref LocalStorageConsumer
   sL.registerLazySingleton<LocalStorageConsumer>(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 import '../../utils/app_colors.dart';
 import '../../utils/sizes.dart';
 
@@ -20,7 +21,8 @@ class AppTextField extends StatelessWidget {
       this.obscureText = false,
       this.onTap,
       this.prefixIcon,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.constraints});
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
   final TextEditingController? controller;
@@ -35,6 +37,7 @@ class AppTextField extends StatelessWidget {
   final Function()? onTap;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
+  final BoxConstraints? constraints;
 
   @override
   Widget build(BuildContext context) {
@@ -46,9 +49,9 @@ class AppTextField extends StatelessWidget {
       keyboardType: TextInputType.name,
       controller: controller,
       decoration: InputDecoration(
+        constraints: constraints,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderSize!),
           borderSide: BorderSide(color: borderColor!),

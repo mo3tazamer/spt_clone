@@ -10,36 +10,33 @@ abstract class Failure extends Equatable {
 }
 
 class ServerFailure extends Failure {
-  const ServerFailure({required String message}) : super(message: message);
+  const ServerFailure({required super.message});
 }
 
 class NetworkFailure extends Failure {
-  const NetworkFailure({required String message}) : super(message: message);
+  const NetworkFailure({required super.message});
 }
 
 class CachedFailure extends Failure {
-  const CachedFailure({required String message}) : super(message: message);
+  const CachedFailure({required super.message});
 }
 
 class LocationFailure extends Failure {
-  const LocationFailure({required String message}) : super(message: message);
+  const LocationFailure({required super.message});
 }
 
 class LocationServiceDisabledFailure extends Failure {
-  const LocationServiceDisabledFailure({required String message})
-      : super(message: message);
+  const LocationServiceDisabledFailure({required super.message});
 }
 
 class LocationPermissionsDeniedFailure extends Failure {
-  const LocationPermissionsDeniedFailure({required String message})
-      : super(message: message);
+  const LocationPermissionsDeniedFailure({required super.message});
 }
 
 class LocationPermissionsDeniedForeverFailure extends Failure {
-  const LocationPermissionsDeniedForeverFailure({required String message})
-      : super(message: message);
+  const LocationPermissionsDeniedForeverFailure({required super.message});
 }
 
 class GalleryFailure extends Failure {
-  const GalleryFailure({required String message}) : super(message: message);
+  const GalleryFailure({required super.message});
 }

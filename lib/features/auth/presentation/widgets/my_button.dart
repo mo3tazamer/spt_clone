@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_textstyles.dart';
 import '../../../../core/utils/sizes.dart';
-
-
-
-
 
 class AppMainButton extends StatelessWidget {
   const AppMainButton({
@@ -69,7 +64,7 @@ class AppMainButton extends StatelessWidget {
     double height = AppSizes.s56,
     double borderRadius = AppSizes.s48,
     Color borderColor = AppColors.whitePrimaryColor,
-    Color textColor = AppColors.regularTextColor,
+    Color textColor = AppColors.grayColor,
   }) =>
       AppMainButton(
         text: text,
@@ -97,9 +92,9 @@ class AppMainButton extends StatelessWidget {
         ),
         side: borderColor != null
             ? BorderSide(
-          color:
-          onPressed == null ? const Color(0xfff4d4d4) : borderColor!,
-        )
+                color:
+                    onPressed == null ? const Color(0xfff4d4d4) : borderColor!,
+              )
             : BorderSide.none,
       ),
       constraints: BoxConstraints.tightFor(
@@ -109,14 +104,14 @@ class AppMainButton extends StatelessWidget {
       child: child ??
           (text != null
               ? Text(
-            text!,
-            style: AppTextStyles.style15.copyWith(
-              color: onPressed == null
-                  ? inactiveTextColor ?? const Color(0xfff4d4d4)
-                  : textColor,
-              fontWeight: FontWeight.w600,
-            ),
-          )
+                  text!,
+                  style: AppTextStyles.style15.copyWith(
+                    color: onPressed == null
+                        ? inactiveTextColor ?? const Color(0xfff4d4d4)
+                        : textColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                )
               : null),
     );
   }

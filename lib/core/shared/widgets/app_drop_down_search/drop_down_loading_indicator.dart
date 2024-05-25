@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/sizes.dart';
 
-
 class DropDownLoadingIndicator extends StatelessWidget {
   const DropDownLoadingIndicator({
     super.key,

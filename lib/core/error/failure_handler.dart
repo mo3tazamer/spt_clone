@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-
-
 import '../utils/app_strings.dart';
 import 'failures.dart';
 

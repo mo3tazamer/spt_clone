@@ -2,9 +2,6 @@ import 'package:dio/dio.dart';
 
 import 'package:flutter/foundation.dart';
 
-
-
-
 import '../local_storage/local_storage_consumer.dart';
 import '../utils/app_constants.dart';
 

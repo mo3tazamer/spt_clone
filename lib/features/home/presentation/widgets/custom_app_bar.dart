@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,12 +29,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       // ),
       backgroundColor: Colors.transparent,
       automaticallyImplyLeading: false,
-      leading: AppSvgImage(
-        image: IconAssets.settingIcon,
-        color: Colors.black,
-        fit: BoxFit.scaleDown,
-        height: AppSizes.s30.h,
-        width: AppSizes.s30.w,
+      leading: IconButton(
+        onPressed: () {},
+        icon: AppSvgImage(
+          image: IconAssets.settingIcon,
+          color: Colors.black,
+          fit: BoxFit.scaleDown,
+          height: AppSizes.s30.h,
+          width: AppSizes.s30.w,
+        ),
       ),
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarIconBrightness: Brightness.light,
@@ -49,17 +51,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(left: AppSizes.s18),
+          padding: const EdgeInsets.only(left: AppSizes.s10),
 
           /// handle badge
-          child: badges.Badge(
-            badgeContent: const Text('3'),
-            child: AppSvgImage(
-              image: IconAssets.iconNotification,
-              color: AppColors.lightGray1,
-              fit: BoxFit.contain,
-              height: AppSizes.s30.h,
-              width: AppSizes.s30.h,
+          child: IconButton(
+            onPressed: () {},
+            icon: badges.Badge(
+              badgeContent: const Text('3'),
+              child: AppSvgImage(
+                image: IconAssets.iconNotification,
+                color: AppColors.lightGray1,
+                fit: BoxFit.contain,
+                height: AppSizes.s30.h,
+                width: AppSizes.s30.h,
+              ),
             ),
           ),
         )

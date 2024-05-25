@@ -7,7 +7,7 @@ class RegisterUseCase {
   final AuthRepository authRepository;
   RegisterUseCase({required this.authRepository});
 
-  Future<Result<void , Failure>> call(
+  Future<Result<void, Failure>> call(
       {required String name,
       required String phone,
       required String cityId}) async {

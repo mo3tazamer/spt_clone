@@ -23,12 +23,12 @@ class CityEntity {
       );
 
   factory CityEntity.fromJson(Map<String, dynamic> json) => CityEntity(
-    id: json["id"],
-    name: json["name"],
-  );
+        id: json["id"],
+        name: json["name"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "name": name,
-  };
+        "id": id,
+        "name": name,
+      };
 }

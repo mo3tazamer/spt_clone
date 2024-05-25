@@ -1,4 +1,3 @@
-
 class ApiEndPoints {
   ApiEndPoints._();
   static const String baseUrl = 'https://api.spt.sa/api/v1/';
@@ -10,6 +9,4 @@ class ApiEndPoints {
   static const String updateSettings = 'shared/auth/update-settings';
   static const String userSettings = 'shared/auth/me';
   static const String getCityList = 'cities';
-
-
 }

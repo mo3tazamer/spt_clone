@@ -63,7 +63,6 @@ final class CustomTextFieldProps extends TextFieldProps {
     required this.searchFieldInputType,
   });
 
-
   @override
   TextStyle? get style => AppTextStyles.style14;
 

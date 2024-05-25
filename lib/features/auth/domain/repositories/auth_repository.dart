@@ -1,7 +1,6 @@
 import 'package:multiple_result/multiple_result.dart';
 import 'package:spt_clone/core/error/failures.dart';
 
-
 import '../entities/city.dart';
 import '../entities/user.dart';
 
@@ -11,5 +10,6 @@ abstract class AuthRepository {
   Future<Result<dynamic, Failure>> sendOtp({required String recipient});
   Future<Result<User?, Failure>> verifyOtp(
       {required String recipient, required String code});
-  Future<Result<List<CityEntity>, Failure>> getCityList({required String param});
+  Future<Result<List<CityEntity>, Failure>> getCityList(
+      {required String param});
 }

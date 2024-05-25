@@ -6,9 +6,6 @@ import '../utils/app_strings.dart';
 import 'exceptions.dart';
 import 'failures.dart';
 
-
-
-
 /// A mixin that provides exception handling for repository server operations.
 ///
 /// This mixin is intended to be used with classes that interact with a server
@@ -70,7 +67,6 @@ mixin RepositoryServerExceptionMixin on Object {
     }
   }
 }
-
 
 // mixin RepositoryExceptionMixin on Object {
 //   Future<bool> get isConnected;

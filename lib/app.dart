@@ -8,10 +8,9 @@ import 'package:spt_clone/core/git_it/git_it.dart';
 import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
-
 import 'config/routes/app_generator.dart';
 
-import 'features/splash/presentation/screens/splash_screen.dart';
+
 
 class SptClone extends StatelessWidget {
   const SptClone({super.key});
@@ -32,7 +31,15 @@ class SptClone extends StatelessWidget {
               supportedLocales: context.supportedLocales,
               locale: context.locale,
               theme: AppTheme.themeData,
-              builder: EasyLoading.init(),
+              builder: EasyLoading.init(
+                builder: (context, child) {
+                  return MediaQuery(
+                    data: MediaQuery.of(context)
+                        .copyWith(textScaler: const TextScaler.linear(1)),
+                    child: child!,
+                  );
+                },
+              ),
               home: const HomeScreen(),
             );
           }),

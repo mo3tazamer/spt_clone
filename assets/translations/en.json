@@ -22,7 +22,23 @@
   "someThingWentWrong" : "some Thing Went Wrong",
   "required" : "required",
   "success" : "success",
-  "city" : "city"
+  "city" : "city",
+
+  "closePageToTryAgain" : "close Page ToTry Again",
+  "search" : "search",
+  "monthlyPackage" : "monthly Package",
+  "oneMonthSubscriptionOneMonthFree" : "One month subscription + one month free",
+  "riyals150" : "SAR 150",
+  "subscriptionPackages" : "subscription Packages",
+  "viewAll" : "view All",
+  "requestSpareParts" : "request Spare Parts",
+  "requestTow" : "request Tow",
+  "sellingCarForRepairs" : "selling Car For Repairs",
+  "sptHelp" : "How spt helps you",
+  "howOrderInSpt" : "how Order In Spt",
+  "whatCustomersSaidAboutUs" : "what Customers Said About Us",
+  "howWeGuarantee" : "how We Guarantee",
+  "yourRights" : "your Rights"
 
 
 }

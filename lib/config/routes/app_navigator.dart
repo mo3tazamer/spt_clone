@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' show BuildContext, Navigator, Route;
-   // handle navigator
+
+// handle navigator
 final class AppNavigator {
   AppNavigator._();
 
@@ -42,12 +43,14 @@ final class AppNavigator {
     );
   }
 
-  static popUntil<T>(BuildContext context, {
-        var arguments,
-        bool withNavBar = true,
-        required bool Function(Route<dynamic>) predicate,
-      }) {
-    return Navigator.of(context, rootNavigator: !withNavBar).popUntil(predicate);
+  static popUntil<T>(
+    BuildContext context, {
+    var arguments,
+    bool withNavBar = true,
+    required bool Function(Route<dynamic>) predicate,
+  }) {
+    return Navigator.of(context, rootNavigator: !withNavBar)
+        .popUntil(predicate);
   }
 
   static void pop<T>(BuildContext context, [T? result]) =>

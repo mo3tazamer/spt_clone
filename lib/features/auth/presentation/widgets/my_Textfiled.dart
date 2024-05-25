@@ -8,7 +8,6 @@ import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
 
 import '../../../../core/utils/app_colors.dart';
 
-
 class PhoneFormFiled extends StatelessWidget {
   const PhoneFormFiled(
       {super.key,
@@ -23,7 +22,8 @@ class PhoneFormFiled extends StatelessWidget {
       this.borderSize = AppSizes.s28,
       this.hintStyle,
       this.borderColor = AppColors.borderColor,
-      this.focusColor, this.inputFormatters});
+      this.focusColor,
+      this.inputFormatters});
 
   final String? hintText;
   final String? labelText;
@@ -43,7 +43,6 @@ class PhoneFormFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
       inputFormatters: inputFormatters,
       obscureText: obscureText!,
       keyboardType: keyboardType,
@@ -64,7 +63,7 @@ class PhoneFormFiled extends StatelessWidget {
             color: AppColors.redColor,
           ),
         ),
-        suffixIcon:  IntrinsicHeight(
+        suffixIcon: IntrinsicHeight(
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

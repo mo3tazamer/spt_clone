@@ -64,7 +64,8 @@ class AuthRepositoryImp implements AuthRepository {
   }
 
   @override
-  Future<Result<List<CityEntity>, Failure>> getCityList({required String param}) async {
+  Future<Result<List<CityEntity>, Failure>> getCityList(
+      {required String param}) async {
     if (await networkInfo.isConnected) {
       try {
         return Result.success(await webServices.getCityList(param: param));
@@ -74,7 +75,6 @@ class AuthRepositoryImp implements AuthRepository {
     } else {
       return const Result.error(
           NetworkFailure(message: AppStrings.noInternetConnection));
-
     }
   }
 }

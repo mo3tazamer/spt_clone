@@ -3,9 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:spt_clone/core/utils/sizes.dart';
 
-
-
-
 class AppSvgImage extends StatelessWidget {
   const AppSvgImage(
       {super.key,
@@ -23,7 +20,6 @@ class AppSvgImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-
       image,
       colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
       fit: fit!,
