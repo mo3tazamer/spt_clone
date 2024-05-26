@@ -9,8 +9,8 @@ import 'package:badges/badges.dart' as badges;
 import '../../../../core/utils/app_assets.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
-
+  const CustomAppBar({super.key, this.title});
+  final Widget? title;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -44,11 +44,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         statusBarColor: Colors.transparent,
       ),
       centerTitle: true,
-      title: Image.asset(
-        ImagesAssets.appBarLogo,
-        fit: BoxFit.scaleDown,
-        scale: .7.dm,
-      ),
+      title: title ??
+          Image.asset(
+            ImagesAssets.appBarLogo,
+            fit: BoxFit.scaleDown,
+            scale: .7.dm,
+          ),
       actions: [
         Padding(
           padding: const EdgeInsets.only(left: AppSizes.s10),

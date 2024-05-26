@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:spt_clone/config/routes/app_navigator.dart';
+import 'package:spt_clone/config/routes/app_routes.dart';
 import 'package:spt_clone/core/utils/app_extensions.dart';
 
 import '../../../../core/utils/app_assets.dart';
@@ -28,9 +30,15 @@ class _SayAboutUsState extends State<SayAboutUs> {
               style: AppTextStyles.style16.copyColorWith(AppColors.black).bold,
             ),
             const Spacer(),
-            Text(
-              AppStrings.viewAll.tr(),
-              style: AppTextStyles.style16,
+            InkWell(
+              onTap: () {
+                AppNavigator.navigateNamedTo(
+                    context, AppRoutes.sayAboutUsScreen);
+              },
+              child: Text(
+                AppStrings.viewAll.tr(),
+                style: AppTextStyles.style16,
+              ),
             ),
           ],
         ),
@@ -43,11 +51,11 @@ class _SayAboutUsState extends State<SayAboutUs> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              _card(),
+              card(),
               SizedBox(
                 width: AppSizes.s5.w,
               ),
-              _card(),
+              card(),
             ],
           ),
         ),
@@ -56,7 +64,7 @@ class _SayAboutUsState extends State<SayAboutUs> {
   }
 }
 
-Widget _card() {
+Widget card() {
   return Container(
     alignment: Alignment.center,
     decoration: BoxDecoration(
@@ -83,19 +91,20 @@ Widget _card() {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'محمد احمد',
                       style: AppTextStyles.style15.withPrimaryColor.bold,
                     ),
-                    SizedBox(
-                      width: 60.w,
-                    ),
+                    const Spacer(),
                     Text(
                       '4.3',
                       style: AppTextStyles.style15.withPrimaryColor.bold,
                     ),
-                    const Icon(Icons.star)
+                    const Icon(
+                      Icons.star,
+                    )
                   ],
                 ),
                 Text(

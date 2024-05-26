@@ -46,4 +46,6 @@ class AppStrings {
   static const String whatCustomersSaidAboutUs = LocaleKeys.whatCustomersSaidAboutUs;
   static const String howWeGuarantee = LocaleKeys.howWeGuarantee;
   static const String yourRights = LocaleKeys.yourRights;
+
+
 }
