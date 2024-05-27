@@ -1,21 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spt_clone/core/utils/app_colors.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
-import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
-import 'package:badges/badges.dart' as badges;
-
+import '../../../../core/shared/widgets/app_back_button.dart';
 import '../../../../core/utils/app_assets.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, this.title});
+  const CustomAppBar({
+    super.key,
+    this.title,
+    this.leading,
+    this.actions,
+    this.automaticallyImplyLeading = true,
+    this.centerTitle = true,
+  });
   final Widget? title;
+  final Widget? leading;
+  final List<Widget>? actions;
+  final bool automaticallyImplyLeading;
+  final bool? centerTitle;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: AppSizes.s90.h,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: Colors.transparent,
+      ),
+      centerTitle: centerTitle,
+      backgroundColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+      automaticallyImplyLeading: automaticallyImplyLeading,
+      //app bar background
       flexibleSpace: Container(
+        height: double.infinity,
+        width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(25.0.dm),
@@ -24,56 +44,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 image: AssetImage(ImagesAssets.appBarBackground),
                 fit: BoxFit.fitHeight)),
       ),
-      // shape: RoundedRectangleBorder(
-      //   borderRadius: BorderRadius.vertical(bottom: Radius.circular(20.0.sw)),
-      // ),
-      backgroundColor: Colors.transparent,
-      automaticallyImplyLeading: false,
-      leading: IconButton(
-        onPressed: () {},
-        icon: AppSvgImage(
-          image: IconAssets.settingIcon,
-          color: Colors.black,
-          fit: BoxFit.scaleDown,
-          height: AppSizes.s30.h,
-          width: AppSizes.s30.w,
-        ),
-      ),
-      systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarIconBrightness: Brightness.light,
-        statusBarColor: Colors.transparent,
-      ),
-      centerTitle: true,
+      //app bar logo or title
       title: title ??
           Image.asset(
             ImagesAssets.appBarLogo,
             fit: BoxFit.scaleDown,
             scale: .7.dm,
           ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(left: AppSizes.s10),
-
-          /// handle badge
-          child: IconButton(
-            onPressed: () {},
-            icon: badges.Badge(
-              badgeContent: const Text('3'),
-              child: AppSvgImage(
-                image: IconAssets.iconNotification,
-                color: AppColors.lightGray1,
-                fit: BoxFit.contain,
-                height: AppSizes.s30.h,
-                width: AppSizes.s30.h,
-              ),
-            ),
-          ),
-        )
-      ],
+      leading: (automaticallyImplyLeading == true && leading == null)
+          ? const AppBackButton()
+          : leading,
+      actions: actions,
     );
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size(double.infinity, AppSizes.s90.h);
 }

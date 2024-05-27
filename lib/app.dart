@@ -10,6 +10,7 @@ import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
 import 'config/routes/app_generator.dart';
 import 'features/home/presentation/screens/says_about_us_screen.dart';
+import 'features/home/presentation/screens/store_details.dart';
 
 
 
@@ -41,7 +42,7 @@ class SptClone extends StatelessWidget {
                   );
                 },
               ),
-              home: const SayAboutUsScreen(),
+              home: const StoreDetails(),
             );
           }),
     );

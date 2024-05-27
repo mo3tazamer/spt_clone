@@ -16,6 +16,7 @@ class ImagesAssets {
   static const String car = '$_imagesPath/car.png';
   static const String phoneHand = '$_imagesPath/phone_hand.png';
   static const String carFix = '$_imagesPath/car_fix.png';
+  static const String mapImage = '$_imagesPath/map_image.png';
 }
 
 class IconAssets {
@@ -25,4 +26,13 @@ class IconAssets {
   static const String iconNotification = '$_iconsPath/icon_notification.svg';
   static const String subscriptionIcon = '$_iconsPath/subscription_icon.svg';
   static const String car = '$_iconsPath/car.svg';
+  static const String backNav = '$_iconsPath/back_nav.svg';
+  static const String carService = '$_iconsPath/car-service_icon.svg';
+  static const String locationIcon = '$_iconsPath/location_icon.svg';
+  static const String storeService = '$_iconsPath/store_service_icon.svg';
+  static const String rateIcon = '$_iconsPath/rate_icon.svg';
+  static const String orderIcon = '$_iconsPath/order_icon.svg';
+  static const String micIcon = '$_iconsPath/mic_icon.svg';
+  static const String deliveryIcon = '$_iconsPath/delivery_icon.svg';
+
 }

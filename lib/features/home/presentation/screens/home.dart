@@ -2,10 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/core/utils/app_strings.dart';
-
+import 'package:badges/badges.dart' as badges;
 import '../../../../core/shared/widgets/app_text_field.dart';
 
+import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/sizes.dart';
+import '../../../auth/presentation/widgets/svg_image.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/guarantee_your_rights.dart';
 import '../widgets/help_list.dart';
@@ -24,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      appBar: _homeAppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.dm),
         child: Center(
@@ -71,4 +73,35 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+}
+
+CustomAppBar _homeAppBar() {
+  return CustomAppBar(
+    automaticallyImplyLeading: false,
+    leading: IconButton(onPressed: () {},
+        icon: AppSvgImage(
+          image: IconAssets.settingIcon,
+          height: AppSizes.s30.h,
+          width: AppSizes.s30.w,
+          color:  Colors.black,
+
+    )),
+    actions:[IconButton(
+      padding:  const EdgeInsets.all(15),
+      onPressed: () {},
+      icon: badges.Badge(
+        badgeContent: const Text(
+            '3'
+        ),
+        child: AppSvgImage(image: IconAssets.iconNotification,
+          fit: BoxFit.scaleDown,
+          height: AppSizes.s30.h,
+          width: AppSizes.s30.w,
+          color: Colors.white,
+
+
+        ),
+      ),
+    )]  ,
+  );
 }

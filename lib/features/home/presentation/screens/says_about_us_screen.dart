@@ -7,7 +7,9 @@ import 'package:spt_clone/core/utils/app_textstyles.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
 import 'package:spt_clone/features/home/presentation/widgets/custom_app_bar.dart';
 
+import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_strings.dart';
+import '../../../auth/presentation/widgets/svg_image.dart';
 import '../widgets/what_they_say_about_us.dart';
 
 class SayAboutUsScreen extends StatefulWidget {
@@ -21,11 +23,7 @@ class _SayAboutUsScreenState extends State<SayAboutUsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: Text(AppStrings.whatCustomersSaidAboutUs.tr(),
-            style:
-                AppTextStyles.style16.copyColorWith(AppColors.whiteTextColor)),
-      ),
+      appBar: _sayAboutUsAppBar(),
       body: Padding(
         padding: EdgeInsets.all(AppSizes.s8.dm),
         child: ListView.separated(
@@ -38,4 +36,13 @@ class _SayAboutUsScreenState extends State<SayAboutUsScreen> {
       ),
     );
   }
+}
+
+CustomAppBar _sayAboutUsAppBar() {
+  return CustomAppBar(
+
+
+    title: Text(AppStrings.whatCustomersSaidAboutUs.tr(),style: AppTextStyles.style16.copyWith(color: AppColors.whiteTextColor),),
+
+  );
 }
