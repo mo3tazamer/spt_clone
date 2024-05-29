@@ -5,8 +5,10 @@ import 'package:spt_clone/core/utils/app_colors.dart';
 import 'package:spt_clone/core/utils/app_strings.dart';
 import 'package:spt_clone/core/utils/sizes.dart';
 
+import '../../../../config/routes/app_routes.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_textstyles.dart';
+import 'app_bottomsheet.dart';
 
 class HelpList extends StatefulWidget {
   const HelpList({super.key});
@@ -59,7 +61,9 @@ class _HelpListState extends State<HelpList> {
         ),
         InkWell(
           borderRadius: const BorderRadius.all(Radius.circular(15)),
-          onTap: () {},
+          onTap: () {
+            sptHelp(context: context);
+          },
           child: Stack(
             children: [
               Ink(
