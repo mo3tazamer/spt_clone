@@ -29,6 +29,7 @@ class _StoreDetailsState extends State<StoreDetails> {
       body: Padding(
         padding:  EdgeInsets.all(8.0.dm),
         child: ListView(
+          physics: const BouncingScrollPhysics(decelerationRate: ScrollDecelerationRate.fast),
           children: [
             _storeDetails(),
             Text(
