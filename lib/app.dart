@@ -12,6 +12,7 @@ import 'config/routes/app_generator.dart';
 import 'features/home/presentation/screens/notification_screen.dart';
 import 'features/home/presentation/screens/says_about_us_screen.dart';
 import 'features/home/presentation/screens/store_details.dart';
+import 'features/layout/presentation/screens/layout_screen.dart';
 
 
 
@@ -29,6 +30,7 @@ class SptClone extends StatelessWidget {
           builder: (context, child) {
             return MaterialApp(
               onGenerateRoute: AppGenerator.getRoute,
+
               debugShowCheckedModeBanner: false,
               localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,
@@ -36,14 +38,18 @@ class SptClone extends StatelessWidget {
               theme: AppTheme.themeData,
               builder: EasyLoading.init(
                 builder: (context, child) {
+                  final mediaQueryData = MediaQuery.of(context);
+                  final scale = mediaQueryData.textScaler
+                      .clamp(minScaleFactor: 1.0, maxScaleFactor: 1.3);
                   return MediaQuery(
+                    //Setting font does not change with system font size
                     data: MediaQuery.of(context)
-                        .copyWith(textScaler: const TextScaler.linear(1)),
+                        .copyWith(textScaler: scale),
                     child: child!,
                   );
                 },
               ),
-              home: const NotificationScreen(),
+              home: const LayOutScreen(),
             );
           }),
     );

@@ -15,13 +15,13 @@ class AppSvgImage extends StatelessWidget {
   final Color? color;
   final double? height;
   final double? width;
-  final BoxFit? fit;
+  final BoxFit? fit ;
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       image,
-      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
+      colorFilter:color == null ? null : ColorFilter.mode(color!, BlendMode.srcIn),
       fit: fit!,
       height: height,
       width: width,

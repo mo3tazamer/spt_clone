@@ -37,6 +37,10 @@ class IconAssets {
   static const String askAnswerMarkWrong = '$_iconsPath/ask_answer_mark_wong.svg';
   static const String askAnswerMarkRight = '$_iconsPath/ask_answer_mark_right.svg';
   static const String videoIcon = '$_iconsPath/video_icon.svg';
+  static const String home = '$_iconsPath/home_icon.svg';
+  static const String myOrder = '$_iconsPath/myorder_icon.svg';
+  static const String myServices = '$_iconsPath/myservices_icon.svg';
+  static const String myWallet = '$_iconsPath/mywallet.svg';
 
 
 }
