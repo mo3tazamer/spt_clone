@@ -9,6 +9,7 @@ import 'package:spt_clone/features/auth/presentation/screens/login_Screen.dart';
 import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
 import '../../../../core/utils/app_constants.dart';
+import '../../../layout/presentation/screens/layout_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -35,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 Widget _nextScreen() {
   if (sL<SharedPreferences>().getString(AppConstants.token) != null) {
-    return const HomeScreen();
+    return const LayOutScreen();
   } else {
     return const LogInScreen();
   }

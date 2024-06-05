@@ -9,12 +9,8 @@ import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:spt_clone/features/home/presentation/screens/home.dart';
 
 import 'config/routes/app_generator.dart';
-import 'features/home/presentation/screens/notification_screen.dart';
-import 'features/home/presentation/screens/says_about_us_screen.dart';
-import 'features/home/presentation/screens/store_details.dart';
+import 'features/home/presentation/widgets/home_tab.dart';
 import 'features/layout/presentation/screens/layout_screen.dart';
-
-
 
 class SptClone extends StatelessWidget {
   const SptClone({super.key});
@@ -39,17 +35,18 @@ class SptClone extends StatelessWidget {
               builder: EasyLoading.init(
                 builder: (context, child) {
                   final mediaQueryData = MediaQuery.of(context);
-                  final scale = mediaQueryData.textScaler
-                      .clamp(minScaleFactor: 1.0, maxScaleFactor: 1.3);
+                  final scale = mediaQueryData.textScaler.clamp(
+                    minScaleFactor: 1.0,
+                    maxScaleFactor: 1.3,
+                  );
                   return MediaQuery(
                     //Setting font does not change with system font size
-                    data: MediaQuery.of(context)
-                        .copyWith(textScaler: scale),
+                    data: MediaQuery.of(context).copyWith(textScaler: scale),
                     child: child!,
                   );
                 },
               ),
-              home: const LayOutScreen(),
+              home: const HomeScreen(),
             );
           }),
     );

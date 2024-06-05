@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:spt_clone/core/utils/app_extensions.dart';
 import 'package:spt_clone/core/utils/app_textstyles.dart';
-import 'package:spt_clone/core/utils/sizes.dart';
 import 'package:spt_clone/features/auth/presentation/widgets/svg_image.dart';
-
 import '../../../../core/utils/app_colors.dart';
 
 PersistentBottomNavBarItem navBarItem({
@@ -20,7 +16,6 @@ PersistentBottomNavBarItem navBarItem({
       image: icon,
       color: AppColors.grayColor,
       fit: BoxFit.contain,
-
     ),
     textStyle: AppTextStyles.style12,
     icon: AppSvgImage(
