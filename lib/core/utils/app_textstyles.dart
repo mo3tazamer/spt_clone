@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show TextStyle;
+import 'package:flutter/material.dart' show FontWeight, TextStyle;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/core/utils/app_colors.dart';
 
@@ -6,6 +6,12 @@ import 'app_constants.dart';
 
 class AppTextStyles {
   AppTextStyles._();
+  static TextStyle style10 = TextStyle(
+    fontFamily: AppConstants.fontFamilyAr,
+
+    fontSize: 10.sp,
+    color: AppColors.whiteTextColor,
+  );
   static TextStyle style15 = TextStyle(
     fontFamily: AppConstants.fontFamilyAr,
     fontSize: 15.sp,

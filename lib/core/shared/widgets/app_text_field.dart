@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 import '../../utils/app_colors.dart';
 import '../../utils/sizes.dart';
 
@@ -42,6 +41,9 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+
+      onTapOutside: (event) => FocusScope.of(context).unfocus(),
+      keyboardAppearance: Brightness.dark,
       obscureText: obscureText!,
       onTap: onTap,
       validator: validator,
@@ -49,6 +51,7 @@ class AppTextField extends StatelessWidget {
       keyboardType: TextInputType.name,
       controller: controller,
       decoration: InputDecoration(
+
         constraints: constraints,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,

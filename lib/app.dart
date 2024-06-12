@@ -46,7 +46,7 @@ class SptClone extends StatelessWidget {
                   );
                 },
               ),
-              home: const HomeScreen(),
+              home: const LayOutScreen(),
             );
           }),
     );

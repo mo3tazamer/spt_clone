@@ -17,6 +17,7 @@ class ImagesAssets {
   static const String phoneHand = '$_imagesPath/phone_hand.png';
   static const String carFix = '$_imagesPath/car_fix.png';
   static const String mapImage = '$_imagesPath/map_image.png';
+  static const String offerImage = '$_imagesPath/offer_image.png';
 }
 
 class IconAssets {

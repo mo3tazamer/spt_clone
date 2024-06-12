@@ -10,6 +10,7 @@ import '../../../../core/shared/widgets/app_text_field.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/sizes.dart';
 import '../../../auth/presentation/widgets/svg_image.dart';
+import '../../../search/presentation/screens/searchtab.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/guarantee_your_rights.dart';
 import '../widgets/help_list.dart';
@@ -29,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: _homeAppBar(context),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.dm),
@@ -41,15 +41,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: AppSizes.s15.h,
                 ),
-                AppTextField(
-                    constraints:
-                        BoxConstraints.tightFor(width: 327.w, height: 60.h),
-                    borderSize: 18.dm,
-                    hintText: AppStrings.search.tr(),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 25.dm,
-                    )),
+                // AppTextField(
+                //     constraints:
+                //         BoxConstraints.tightFor(width: 327.w, height: 60.h),
+                //     borderSize: 18.dm,
+                //     hintText: AppStrings.search.tr(),
+                //     prefixIcon: Icon(
+                //       Icons.search,
+                //       size: 25.dm,
+                //     )),
+                const SearchTab(),
                 SizedBox(
                   height: AppSizes.s15.h,
                 ),
@@ -57,13 +58,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: AppSizes.s15.h,
                 ),
-                 SizedBox(height: 200.h,
-                     child: const HomeTab()),
+                const SubscriptionPackages(),
                 SizedBox(
                   height: AppSizes.s15.h,
                 ),
-
-                const SubscriptionPackages(),
+                const HomeTab(),
+                SizedBox(
+                  height: AppSizes.s15.h,
+                ),
                 SizedBox(
                   height: AppSizes.s15.h,
                 ),
