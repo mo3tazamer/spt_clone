@@ -35,10 +35,7 @@ class _CustomTabBarState extends State<CustomTabBar>
                   index: index, label: widget.tabItems[index].label)),
         ),
         Expanded(
-          child: IndexedStack(
-            index: widget.selectedIndex,
-            children: widget.tabView,
-          ),
+          child: widget.tabView[widget.selectedIndex],
         ),
       ],
     );
