@@ -8,7 +8,7 @@ import '../../features/home/presentation/screens/says_about_us_screen.dart';
 import '../../features/home/presentation/screens/store_details.dart';
 import '../../features/layout/presentation/screens/layout_screen.dart';
 import '../../features/search/presentation/screens/search_view.dart';
-import '../../features/search/presentation/screens/searchtab.dart';
+
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import 'app_routes.dart';
 
