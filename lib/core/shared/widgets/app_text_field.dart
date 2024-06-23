@@ -21,7 +21,10 @@ class AppTextField extends StatelessWidget {
       this.onTap,
       this.prefixIcon,
       this.suffixIcon,
-      this.constraints});
+      this.constraints,
+      this.readOnly = false,
+      this.onChanged,
+      this.onFieldSubmitted, this.focusNode});
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
   final TextEditingController? controller;
@@ -37,11 +40,18 @@ class AppTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final BoxConstraints? constraints;
+  final bool readOnly;
+  final void Function(String)? onChanged;
 
+  final void Function(String)? onFieldSubmitted;
+  final FocusNode? focusNode;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
+      focusNode: focusNode,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
+      readOnly: readOnly,
       onTapOutside: (event) => FocusScope.of(context).unfocus(),
       keyboardAppearance: Brightness.dark,
       obscureText: obscureText!,
@@ -51,7 +61,6 @@ class AppTextField extends StatelessWidget {
       keyboardType: TextInputType.name,
       controller: controller,
       decoration: InputDecoration(
-
         constraints: constraints,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,

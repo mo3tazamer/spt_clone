@@ -33,6 +33,7 @@ class _LayOutScreenState extends State<LayOutScreen> {
         label: 'الرئيسية',
         routeAndNavigatorSettings: const RouteAndNavigatorSettings(
 
+
             onGenerateRoute: AppGenerator.getRoute)),
     navBarItem(
         icon: IconAssets.myOrder,
