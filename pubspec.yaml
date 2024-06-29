@@ -56,6 +56,10 @@ dependencies:
   auto_size_text: ^3.0.0
   dotted_line: ^3.2.2
   easy_debounce: ^2.0.3
+  geolocator: ^9.0.1
+  geocoding: ^2.0.5
+  google_maps_flutter: ^2.5.0
+  google_static_maps_controller: ^1.0.0
 
 
 
