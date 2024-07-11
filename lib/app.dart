@@ -6,10 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/config/theme/theme.dart';
 import 'package:spt_clone/core/git_it/git_it.dart';
 import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:spt_clone/features/home/presentation/screens/home.dart';
+
 
 import 'config/routes/app_generator.dart';
-import 'features/home/presentation/widgets/home_tab.dart';
+
 import 'features/layout/presentation/screens/layout_screen.dart';
 
 class SptClone extends StatelessWidget {

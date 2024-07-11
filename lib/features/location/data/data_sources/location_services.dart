@@ -44,7 +44,7 @@ class LocationRemoteDataSourceImpl implements LocationRemoteDataSource {
   @override
   Future<LocationModel> getCurrentLocation() async {
     if (!await _isLocationServiceEnabled()) {
-      throw Exception('Location services are disabled.');
+      throw Exception('Location services are disabled');
     }
 
     if (!await _checkPermission()) {

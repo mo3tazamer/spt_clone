@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show FontWeight, TextStyle;
+import 'package:flutter/material.dart' show TextStyle;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spt_clone/core/utils/app_colors.dart';
 
