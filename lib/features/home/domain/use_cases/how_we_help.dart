@@ -23,12 +23,19 @@ class PagesParams extends Equatable {
   final int? page;
   final int? paginate;
 
+
   const PagesParams({
     required this.staticPagesType,
     this.page,
     this.paginate,
   });
-  @override
+  Map<String, dynamic>  queryParams(){
+  return {
+  'page': page,
+  'paginate':paginate
+  };
+}
+@override
   List<Object?> get props => [
         staticPagesType,
         page,
