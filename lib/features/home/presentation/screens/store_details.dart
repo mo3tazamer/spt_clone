@@ -27,9 +27,10 @@ class _StoreDetailsState extends State<StoreDetails> {
       ),
       extendBody: true,
       body: Padding(
-        padding:  EdgeInsets.all(8.0.dm),
+        padding: EdgeInsets.all(8.0.dm),
         child: ListView(
-          physics: const BouncingScrollPhysics(decelerationRate: ScrollDecelerationRate.fast),
+          physics: const BouncingScrollPhysics(
+              decelerationRate: ScrollDecelerationRate.fast),
           children: [
             _storeDetails(),
             Text(
@@ -41,7 +42,7 @@ class _StoreDetailsState extends State<StoreDetails> {
               ImagesAssets.mapImage,
               fit: BoxFit.scaleDown,
             ),
-             SizedBox(
+            SizedBox(
               height: 10.h,
             ),
             Row(
@@ -65,7 +66,7 @@ class _StoreDetailsState extends State<StoreDetails> {
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 8.h,
             ),
             Row(
@@ -76,7 +77,7 @@ class _StoreDetailsState extends State<StoreDetails> {
                   width: AppSizes.s30.w,
                   color: AppColors.black,
                 ),
-                 SizedBox(
+                SizedBox(
                   width: 5.w,
                 ),
                 const Text(' امكانية التواصل المرئى مع العميل ؟'),
@@ -89,7 +90,7 @@ class _StoreDetailsState extends State<StoreDetails> {
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 8.h,
             ),
             Row(
@@ -100,7 +101,7 @@ class _StoreDetailsState extends State<StoreDetails> {
                   width: AppSizes.s30.w,
                   color: AppColors.black,
                 ),
-                 SizedBox(
+                SizedBox(
                   width: 5.w,
                 ),
                 const Text(' امكانية التواصل الصوتى مع العميل ؟'),
@@ -113,7 +114,7 @@ class _StoreDetailsState extends State<StoreDetails> {
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 8.h,
             ),
           ],
@@ -156,11 +157,11 @@ Widget _storeDetails() {
             ],
           ),
         ),
-         SizedBox(
+        SizedBox(
           height: 5.h,
         ),
         const Text('اسم المتجر'),
-         SizedBox(
+        SizedBox(
           height: 15.h,
         ),
         Row(
@@ -238,7 +239,7 @@ Widget _storeDetails() {
             const Text('خدمات المتجر'),
           ],
         ),
-         SizedBox(height: 8.h),
+        SizedBox(height: 8.h),
         const Text('خدمة الصيانة - خدمة نقل السيارات'),
         Row(
           children: [
@@ -255,7 +256,7 @@ Widget _storeDetails() {
             const Text('الفروع'),
           ],
         ),
-         SizedBox(height: 8.h),
+        SizedBox(height: 8.h),
         const Text('اسم الفرع - اسم الفرع'),
         const SizedBox(height: 5),
       ],

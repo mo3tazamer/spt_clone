@@ -24,7 +24,8 @@ class AppTextField extends StatelessWidget {
       this.constraints,
       this.readOnly = false,
       this.onChanged,
-      this.onFieldSubmitted, this.focusNode});
+      this.onFieldSubmitted,
+      this.focusNode});
   final String? Function(String?)? validator;
   final List<TextInputFormatter>? inputFormatters;
   final TextEditingController? controller;

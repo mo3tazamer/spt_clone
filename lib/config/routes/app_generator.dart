@@ -34,7 +34,7 @@ class AppGenerator {
 
       case AppRoutes.storeDetails:
         return MaterialPageRoute(builder: (context) => const StoreDetails());
-      case AppRoutes.searchScreen :
+      case AppRoutes.searchScreen:
         return MaterialPageRoute(builder: (context) => const SearchView());
       default:
         return MaterialPageRoute(builder: (context) => const Scaffold());

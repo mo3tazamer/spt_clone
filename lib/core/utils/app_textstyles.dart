@@ -8,7 +8,6 @@ class AppTextStyles {
   AppTextStyles._();
   static TextStyle style10 = TextStyle(
     fontFamily: AppConstants.fontFamilyAr,
-
     fontSize: 10.sp,
     color: AppColors.whiteTextColor,
   );

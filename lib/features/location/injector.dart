@@ -7,8 +7,6 @@ import 'data/repositories/Location_Repository_Impl.dart';
 import 'domain/repositories/Location_Repository.dart';
 import 'domain/use_cases/get_location.dart';
 
-
-
 void initLocation() {
   //cubit
   sL.registerFactory<LocationCubit>(() => LocationCubit(sL()));

@@ -28,12 +28,9 @@ class _LayOutScreenState extends State<LayOutScreen> {
 
   List<PersistentBottomNavBarItem> items = [
     navBarItem(
-
         icon: IconAssets.home,
         label: 'الرئيسية',
         routeAndNavigatorSettings: const RouteAndNavigatorSettings(
-
-
             onGenerateRoute: AppGenerator.getRoute)),
     navBarItem(
         icon: IconAssets.myOrder,
@@ -55,7 +52,6 @@ class _LayOutScreenState extends State<LayOutScreen> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-
       /// handleAndroidBackButtonPress: true,
       controller: PersistentTabController(initialIndex: 0),
       screens: screens,

@@ -5,7 +5,5 @@ import '../../../../core/error/failures.dart';
 import '../entities/location.dart';
 
 abstract class LocationRepository {
-  Future<Result<Location,Failure >> getCurrentLocation() ;
-
-
+  Future<Result<Location, Failure>> getCurrentLocation();
 }

@@ -14,12 +14,14 @@ class NotificationScreen extends StatefulWidget {
 
 class _NotificationScreenState extends State<NotificationScreen> {
   final ScrollController _scrollController = ScrollController();
-  final List<Map<String, String>> _notifications = List.generate(10, (index) => {
-    'time': '08:00',
-    'title': 'Notification $index',
-    'details': 'تفاصيل الاشعار',
-    'date': DateTime.now().subtract(Duration(days: index)).toString()
-  }); // Initial notifications
+  final List<Map<String, String>> _notifications = List.generate(
+      10,
+      (index) => {
+            'time': '08:00',
+            'title': 'Notification $index',
+            'details': 'تفاصيل الاشعار',
+            'date': DateTime.now().subtract(Duration(days: index)).toString()
+          }); // Initial notifications
   bool _isLoading = false;
   int _currentMax = 10;
 
@@ -36,7 +38,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
   }
 
   void _scrollListener() {
-    if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent) {
+    if (_scrollController.position.pixels ==
+        _scrollController.position.maxScrollExtent) {
       _fetchMoreData();
     }
   }
@@ -52,12 +55,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
       setState(() {
         _currentMax = _currentMax + 10;
-        _notifications.addAll(List.generate(10, (index) => {
-          'time': '08:00',
-          'title': 'Notification ${_currentMax + index}',
-          'details': 'تفاصيل الاشعار تفاصيل الاشعار تفاصيل الاشعار',
-          'date': DateTime.now().subtract(Duration(days: _currentMax + index)).toString()
-        }));
+        _notifications.addAll(List.generate(
+            10,
+            (index) => {
+                  'time': '08:00',
+                  'title': 'Notification ${_currentMax + index}',
+                  'details': 'تفاصيل الاشعار تفاصيل الاشعار تفاصيل الاشعار',
+                  'date': DateTime.now()
+                      .subtract(Duration(days: _currentMax + index))
+                      .toString()
+                }));
         _isLoading = false;
       });
     }
@@ -80,7 +87,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
               child: GroupedListView<Map<String, String>, String>(
                 controller: _scrollController,
                 elements: _notifications,
-                groupBy: (notification) => notification['date']!.substring(0, 10),
+                groupBy: (notification) =>
+                    notification['date']!.substring(0, 10),
                 groupSeparatorBuilder: (String date) => Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -101,7 +109,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     ],
                   );
                 },
-               itemComparator: (item1, item2) => item1['date']!.compareTo(item2['date']!),
+                itemComparator: (item1, item2) =>
+                    item1['date']!.compareTo(item2['date']!),
                 //useStickyGroupSeparators: true,
                 //floatingHeader: true,
                 order: GroupedListOrder.DESC,

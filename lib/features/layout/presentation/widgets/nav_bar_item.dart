@@ -11,7 +11,6 @@ PersistentBottomNavBarItem navBarItem({
       const RouteAndNavigatorSettings(),
 }) {
   return PersistentBottomNavBarItem(
-
     inactiveIcon: AppSvgImage(
       image: icon,
       color: AppColors.grayColor,

@@ -7,8 +7,7 @@ import '../../../../core/error/failures.dart';
 
 import '../repositories/home_repo.dart';
 
-final class PlatformReviewsUseCase
-    extends BaseUseCase<List<ReviewModel>, PlatformReviewsParams> {
+final class PlatformReviewsUseCase extends BaseUseCase<List<ReviewModel>, PlatformReviewsParams> {
   final HomeRepo homeRepo;
 
   PlatformReviewsUseCase({required this.homeRepo});

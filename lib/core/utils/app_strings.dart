@@ -34,7 +34,8 @@ class AppStrings {
   static const String closePageToTryAgain = LocaleKeys.closePageToTryAgain;
   static const String search = LocaleKeys.search;
   static const String monthlyPackage = LocaleKeys.monthlyPackage;
-  static const String oneMonthSubscriptionOneMonthFree = LocaleKeys.oneMonthSubscriptionOneMonthFree;
+  static const String oneMonthSubscriptionOneMonthFree =
+      LocaleKeys.oneMonthSubscriptionOneMonthFree;
   static const String riyals150 = LocaleKeys.riyals150;
   static const String subscriptionPackages = LocaleKeys.subscriptionPackages;
   static const String viewAll = LocaleKeys.viewAll;
@@ -43,9 +44,8 @@ class AppStrings {
   static const String sellingCarForRepairs = LocaleKeys.sellingCarForRepairs;
   static const String sptHelp = LocaleKeys.sptHelp;
   static const String howOrderInSpt = LocaleKeys.howOrderInSpt;
-  static const String whatCustomersSaidAboutUs = LocaleKeys.whatCustomersSaidAboutUs;
+  static const String whatCustomersSaidAboutUs =
+      LocaleKeys.whatCustomersSaidAboutUs;
   static const String howWeGuarantee = LocaleKeys.howWeGuarantee;
   static const String yourRights = LocaleKeys.yourRights;
-
-
 }

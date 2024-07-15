@@ -6,6 +6,7 @@ enum StaticPagesTypesEnum {
   howToUse(pathEndpoint: 'how_to_use'),
   howWeHelp(pathEndpoint: 'how_we_help'),
   commissionAndFees(pathEndpoint: 'commission_and_fees');
+
   const StaticPagesTypesEnum({required this.pathEndpoint});
   final String pathEndpoint;
 }

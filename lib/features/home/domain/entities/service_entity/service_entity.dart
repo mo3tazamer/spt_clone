@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'service_entity.freezed.dart';
 part 'service_entity.g.dart';
+
 @freezed
 class ServiceEntity with _$ServiceEntity {
   const factory ServiceEntity({

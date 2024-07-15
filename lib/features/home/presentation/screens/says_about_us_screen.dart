@@ -40,9 +40,9 @@ class _SayAboutUsScreenState extends State<SayAboutUsScreen> {
 
 CustomAppBar _sayAboutUsAppBar() {
   return CustomAppBar(
-
-
-    title: Text(AppStrings.whatCustomersSaidAboutUs.tr(),style: AppTextStyles.style16.copyWith(color: AppColors.whiteTextColor),),
-
+    title: Text(
+      AppStrings.whatCustomersSaidAboutUs.tr(),
+      style: AppTextStyles.style16.copyWith(color: AppColors.whiteTextColor),
+    ),
   );
 }

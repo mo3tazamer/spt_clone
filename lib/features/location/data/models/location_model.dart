@@ -3,7 +3,6 @@ import 'package:geolocator/geolocator.dart';
 import '../../domain/entities/location.dart';
 
 class LocationModel extends Location {
-
   const LocationModel({
     required super.latitude,
     required super.longitude,
@@ -15,6 +14,4 @@ class LocationModel extends Location {
       longitude: position.longitude,
     );
   }
-
-
 }

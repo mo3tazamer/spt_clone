@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 import '../../domain/entities/location.dart';
 import '../../domain/use_cases/get_location.dart';
 

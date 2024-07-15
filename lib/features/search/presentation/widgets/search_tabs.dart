@@ -28,7 +28,6 @@ class _SearchTabsState extends State<SearchTabs> {
       const NewSpairPartsStores(),
       const Center(child: Text('Content 3')),
       const Center(child: Text('Content 4')),
-
     ];
     return SizedBox(
       width: double.infinity,

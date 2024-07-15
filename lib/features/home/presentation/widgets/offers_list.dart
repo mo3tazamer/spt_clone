@@ -14,7 +14,6 @@ class OffersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-     
       scrollDirection: Axis.horizontal,
       itemCount: 5,
       itemBuilder: (context, index) => const _OfferItem(),
@@ -31,12 +30,12 @@ class _OfferItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:    EdgeInsets.all(AppSizes.s6.w),
-      margin:   EdgeInsets.only(top: AppSizes.s6.h, bottom: AppSizes.s6.h),
-        decoration:   BoxDecoration(
-          borderRadius: BorderRadius.circular(10.h),
-          border: Border.all(color: AppColors.borderColor),
-        ),
+      padding: EdgeInsets.all(AppSizes.s6.w),
+      margin: EdgeInsets.only(top: AppSizes.s6.h, bottom: AppSizes.s6.h),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.h),
+        border: Border.all(color: AppColors.borderColor),
+      ),
       child: SizedBox(
         width: 0.64.sw,
         child: GestureDetector(
@@ -47,7 +46,6 @@ class _OfferItem extends StatelessWidget {
             // );
           },
           child: Column(
-
             children: [
               Expanded(
                 child: Container(

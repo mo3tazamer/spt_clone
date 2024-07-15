@@ -7,7 +7,6 @@ import 'package:spt_clone/config/theme/theme.dart';
 import 'package:spt_clone/core/git_it/git_it.dart';
 import 'package:spt_clone/features/auth/presentation/cubit/auth_cubit.dart';
 
-
 import 'config/routes/app_generator.dart';
 
 import 'features/layout/presentation/screens/layout_screen.dart';
@@ -26,7 +25,6 @@ class SptClone extends StatelessWidget {
           builder: (context, child) {
             return MaterialApp(
               onGenerateRoute: AppGenerator.getRoute,
-
               debugShowCheckedModeBanner: false,
               localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,

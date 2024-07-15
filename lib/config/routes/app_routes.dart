@@ -8,5 +8,4 @@ class AppRoutes {
   static const notificationsScreen = '/notification_screen';
   static const storeDetails = '/storeDetails';
   static const searchScreen = '/searchScreen';
-
 }

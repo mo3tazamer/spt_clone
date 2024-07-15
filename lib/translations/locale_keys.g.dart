@@ -1,11 +1,12 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-abstract class  LocaleKeys {
+abstract class LocaleKeys {
   static const logIn = 'logIn';
   static const phoneNumber = 'phoneNumber';
   static const enterPhoneNumber = 'enterPhoneNumber';
   static const identifyCode = 'identifyCode';
-  static const pleaseEnterTheVerificationCodeSentToYourMobilePhone = 'pleaseEnterTheVerificationCodeSentToYourMobilePhone';
+  static const pleaseEnterTheVerificationCodeSentToYourMobilePhone =
+      'pleaseEnterTheVerificationCodeSentToYourMobilePhone';
   static const resendCode = 'resendCode';
   static const identify = 'identify';
   static const signIn = 'signIn';
@@ -27,7 +28,8 @@ abstract class  LocaleKeys {
   static const closePageToTryAgain = 'closePageToTryAgain';
   static const search = 'search';
   static const monthlyPackage = 'monthlyPackage';
-  static const oneMonthSubscriptionOneMonthFree = 'oneMonthSubscriptionOneMonthFree';
+  static const oneMonthSubscriptionOneMonthFree =
+      'oneMonthSubscriptionOneMonthFree';
   static const riyals150 = 'riyals150';
   static const subscriptionPackages = 'subscriptionPackages';
   static const viewAll = 'viewAll';
@@ -39,5 +41,4 @@ abstract class  LocaleKeys {
   static const whatCustomersSaidAboutUs = 'whatCustomersSaidAboutUs';
   static const howWeGuarantee = 'howWeGuarantee';
   static const yourRights = 'yourRights';
-
 }

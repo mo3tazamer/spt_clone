@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../features/auth/injector.dart';
 import '../../features/auth/presentation/cubit/auth_cubit.dart';
+import '../../features/home/home_injector.dart';
 import '../../features/location/injector.dart';
 import '../api/api_consumer.dart';
 import '../api/app_interceptors.dart';
@@ -22,6 +23,7 @@ Future<void> appInjector() async {
   auth();
   //location
   initLocation();
+  homeInjector();
 
   //auth bloc
   sL.registerFactory<AuthCubit>(() => AuthCubit(

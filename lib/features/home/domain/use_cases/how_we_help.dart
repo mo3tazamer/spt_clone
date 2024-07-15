@@ -10,7 +10,7 @@ import '../entities/how_we_help_entity/how_we_help_entity.dart';
 
 class HowWeHelp extends BaseUseCase<HowWeHelpEntity, PagesParams> {
   HomeRepo homeRepo;
-  HowWeHelp(this.homeRepo);
+  HowWeHelp({required this.homeRepo});
 
   @override
   Future<Result<HowWeHelpEntity, Failure>> call(PagesParams params) async {
@@ -23,19 +23,16 @@ class PagesParams extends Equatable {
   final int? page;
   final int? paginate;
 
-
   const PagesParams({
     required this.staticPagesType,
     this.page,
     this.paginate,
   });
-  Map<String, dynamic>  queryParams(){
-  return {
-  'page': page,
-  'paginate':paginate
-  };
-}
-@override
+  Map<String, dynamic> queryParams() {
+    return {'page': page, 'paginate': paginate};
+  }
+
+  @override
   List<Object?> get props => [
         staticPagesType,
         page,
